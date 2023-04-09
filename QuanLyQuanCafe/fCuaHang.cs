@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanCafe
 {
-    public partial class fmain : Form
+    public partial class fCuaHang : Form
     {
-        public fmain()
+        public fCuaHang()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

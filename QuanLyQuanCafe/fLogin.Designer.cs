@@ -31,9 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ChB_show_pass = new System.Windows.Forms.CheckBox();
             this.TeB_username = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.TeB_password = new System.Windows.Forms.TextBox();
@@ -54,50 +53,36 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.but_login);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(41, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 429);
+            this.panel1.Size = new System.Drawing.Size(263, 380);
             this.panel1.TabIndex = 1;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(145, 289);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(104, 16);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Quên mật khẩu";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(153, 354);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 33);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Đăng Ký";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ChB_show_pass);
             this.panel2.Controls.Add(this.TeB_username);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.TeB_password);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(0, 181);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 105);
+            this.panel2.Size = new System.Drawing.Size(253, 121);
             this.panel2.TabIndex = 0;
+            // 
+            // ChB_show_pass
+            // 
+            this.ChB_show_pass.AutoSize = true;
+            this.ChB_show_pass.Location = new System.Drawing.Point(51, 97);
+            this.ChB_show_pass.Name = "ChB_show_pass";
+            this.ChB_show_pass.Size = new System.Drawing.Size(118, 20);
+            this.ChB_show_pass.TabIndex = 2;
+            this.ChB_show_pass.Text = "Hiện mật khẩu";
+            this.ChB_show_pass.UseVisualStyleBackColor = true;
+            this.ChB_show_pass.CheckedChanged += new System.EventHandler(this.ChB_show_pass_CheckedChanged);
             // 
             // TeB_username
             // 
@@ -144,9 +129,9 @@
             this.but_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.but_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.but_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_login.Location = new System.Drawing.Point(47, 354);
+            this.but_login.Location = new System.Drawing.Point(28, 331);
             this.but_login.Name = "but_login";
-            this.but_login.Size = new System.Drawing.Size(100, 33);
+            this.but_login.Size = new System.Drawing.Size(206, 33);
             this.but_login.TabIndex = 2;
             this.but_login.Text = "Đăng nhập";
             this.but_login.UseVisualStyleBackColor = true;
@@ -168,7 +153,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(5, 492);
+            this.label1.Location = new System.Drawing.Point(4, 434);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(320, 32);
             this.label1.TabIndex = 2;
@@ -195,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(331, 545);
+            this.ClientSize = new System.Drawing.Size(331, 478);
             this.Controls.Add(this.but_close);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -206,7 +191,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -229,8 +213,7 @@
         private Button but_login;
         private Label label1;
         private Button but_close;
-        private LinkLabel linkLabel1;
-        private Button button1;
         private ToolTip toolTip1;
+        private CheckBox ChB_show_pass;
     }
 }

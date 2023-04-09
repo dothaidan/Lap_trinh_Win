@@ -24,6 +24,13 @@ namespace QuanLyQuanCafe
             this.Show();
         }
 
-        
+        private void ChB_show_pass_CheckedChanged(object sender, EventArgs e)
+        {
+            if ( ChB_show_pass.Checked)
+            {
+                TeB_password.UseSystemPasswordChar= false;
+            }
+            else TeB_password.UseSystemPasswordChar= true;
+        }
     }
 }

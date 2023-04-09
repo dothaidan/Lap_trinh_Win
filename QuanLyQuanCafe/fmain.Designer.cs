@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PiB_Back = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.but_manage = new System.Windows.Forms.Button();
             this.but_table = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PiB_Back)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.PiB_Back);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.but_manage);
             this.panel1.Controls.Add(this.but_table);
@@ -47,6 +47,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(482, 203);
             this.panel1.TabIndex = 0;
+            // 
+            // PiB_Back
+            // 
+            this.PiB_Back.Image = global::QuanLyQuanCafe.Properties.Resources.exit;
+            this.PiB_Back.Location = new System.Drawing.Point(439, 163);
+            this.PiB_Back.Name = "PiB_Back";
+            this.PiB_Back.Size = new System.Drawing.Size(40, 40);
+            this.PiB_Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PiB_Back.TabIndex = 2;
+            this.PiB_Back.TabStop = false;
+            this.PiB_Back.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -74,17 +85,6 @@
             this.but_table.Text = "Khu vực";
             this.but_table.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources.exit;
-            this.pictureBox1.Location = new System.Drawing.Point(439, 163);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -98,7 +98,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PiB_Back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,6 +109,6 @@
         private Button but_manage;
         private Button but_table;
         private Label label1;
-        private PictureBox pictureBox1;
+        private PictureBox PiB_Back;
     }
 }
