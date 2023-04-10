@@ -32,5 +32,12 @@ namespace QuanLyQuanCafe
             }
             else TeB_password.UseSystemPasswordChar= true;
         }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            tltip_Close.SetToolTip(but_close, "Close");
+            tltip_Username.SetToolTip(TeB_username, "Nhập tên đăng nhập");
+            tltip_Pass.SetToolTip(TeB_password, "Nhập mật khẩu");
+        }
     }
 }

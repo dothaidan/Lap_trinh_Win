@@ -21,5 +21,21 @@ namespace QuanLyQuanCafe
         {
             this.Close();
         }
+
+        private void but_table_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void but_manage_Click(object sender, EventArgs e)
+        {
+            fCuaHang f =new fCuaHang();
+            f.ShowDialog();
+        }
+
+        private void fmain_Load(object sender, EventArgs e)
+        {
+            tltip_logOut.SetToolTip(PiB_logOut, "Log Out");
+        }
     }
 }

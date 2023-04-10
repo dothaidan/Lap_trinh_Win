@@ -41,7 +41,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.but_close = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tltip_Close = new System.Windows.Forms.ToolTip(this.components);
+            this.tltip_Username = new System.Windows.Forms.ToolTip(this.components);
+            this.tltip_Pass = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -190,6 +192,7 @@
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.fLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -213,7 +216,9 @@
         private Button but_login;
         private Label label1;
         private Button but_close;
-        private ToolTip toolTip1;
+        private ToolTip tltip_Close;
         private CheckBox ChB_show_pass;
+        private ToolTip tltip_Username;
+        private ToolTip tltip_Pass;
     }
 }
