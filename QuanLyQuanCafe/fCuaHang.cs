@@ -16,5 +16,25 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_xacnhan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

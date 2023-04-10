@@ -63,6 +63,16 @@ namespace QuanLyQuanCafe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _340683094_782285729982429_2223896382197374609_n {
+            get {
+                object obj = ResourceManager.GetObject("340683094_782285729982429_2223896382197374609_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap abstract_surface_textures_white_concrete_stone_wall {
             get {
                 object obj = ResourceManager.GetObject("abstract-surface-textures-white-concrete-stone-wall", resourceCulture);
