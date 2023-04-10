@@ -24,7 +24,8 @@ namespace QuanLyQuanCafe
 
         private void but_table_Click(object sender, EventArgs e)
         {
-            
+            fTable f = new fTable();
+            f.ShowDialog();
         }
 
         private void but_manage_Click(object sender, EventArgs e)

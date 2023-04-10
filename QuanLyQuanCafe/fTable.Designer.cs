@@ -60,6 +60,7 @@
             but_ban1.TabIndex = 0;
             but_ban1.Text = "Bàn 1";
             but_ban1.UseVisualStyleBackColor = false;
+            but_ban1.Click += but_ban1_Click;
             // 
             // but_ban2
             // 
@@ -71,6 +72,7 @@
             but_ban2.TabIndex = 1;
             but_ban2.Text = "Bàn 2";
             but_ban2.UseVisualStyleBackColor = false;
+            but_ban2.Click += but_ban2_Click;
             // 
             // but_ban3
             // 
@@ -82,6 +84,7 @@
             but_ban3.TabIndex = 3;
             but_ban3.Text = "Bàn 3";
             but_ban3.UseVisualStyleBackColor = false;
+            but_ban3.Click += but_ban3_Click;
             // 
             // but_ban11
             // 
@@ -93,6 +96,7 @@
             but_ban11.TabIndex = 3;
             but_ban11.Text = "Bàn 11";
             but_ban11.UseVisualStyleBackColor = false;
+            but_ban11.Click += but_ban11_Click;
             // 
             // but_ban6
             // 
@@ -104,6 +108,7 @@
             but_ban6.TabIndex = 4;
             but_ban6.Text = "Bàn 6";
             but_ban6.UseVisualStyleBackColor = false;
+            but_ban6.Click += but_ban6_Click;
             // 
             // but_ban16
             // 
@@ -115,6 +120,7 @@
             but_ban16.TabIndex = 5;
             but_ban16.Text = "Bàn 16";
             but_ban16.UseVisualStyleBackColor = false;
+            but_ban16.Click += but_ban16_Click;
             // 
             // but_ban20
             // 
@@ -126,6 +132,7 @@
             but_ban20.TabIndex = 7;
             but_ban20.Text = "Bàn 20";
             but_ban20.UseVisualStyleBackColor = false;
+            but_ban20.Click += but_ban20_Click;
             // 
             // but_ban8
             // 
@@ -137,6 +144,7 @@
             but_ban8.TabIndex = 8;
             but_ban8.Text = "Bàn 8";
             but_ban8.UseVisualStyleBackColor = false;
+            but_ban8.Click += but_ban8_Click;
             // 
             // but_ban7
             // 
@@ -148,6 +156,7 @@
             but_ban7.TabIndex = 9;
             but_ban7.Text = "Bàn 7";
             but_ban7.UseVisualStyleBackColor = false;
+            but_ban7.Click += but_ban7_Click;
             // 
             // but_ban19
             // 
@@ -159,6 +168,7 @@
             but_ban19.TabIndex = 11;
             but_ban19.Text = "Bàn 19";
             but_ban19.UseVisualStyleBackColor = false;
+            but_ban19.Click += but_ban19_Click;
             // 
             // but_ban15
             // 
@@ -170,6 +180,7 @@
             but_ban15.TabIndex = 12;
             but_ban15.Text = "Bàn 15";
             but_ban15.UseVisualStyleBackColor = false;
+            but_ban15.Click += but_ban15_Click;
             // 
             // but_ban18
             // 
@@ -181,6 +192,7 @@
             but_ban18.TabIndex = 13;
             but_ban18.Text = "Bàn 18";
             but_ban18.UseVisualStyleBackColor = false;
+            but_ban18.Click += but_ban18_Click;
             // 
             // but_ban17
             // 
@@ -192,6 +204,7 @@
             but_ban17.TabIndex = 14;
             but_ban17.Text = "Bàn 17";
             but_ban17.UseVisualStyleBackColor = false;
+            but_ban17.Click += but_ban17_Click;
             // 
             // but_ban14
             // 
@@ -203,6 +216,7 @@
             but_ban14.TabIndex = 15;
             but_ban14.Text = "Bàn 14";
             but_ban14.UseVisualStyleBackColor = false;
+            but_ban14.Click += but_ban14_Click;
             // 
             // but_ban13
             // 
@@ -214,6 +228,7 @@
             but_ban13.TabIndex = 16;
             but_ban13.Text = "Bàn 13";
             but_ban13.UseVisualStyleBackColor = false;
+            but_ban13.Click += but_ban13_Click;
             // 
             // but_ban9
             // 
@@ -225,6 +240,7 @@
             but_ban9.TabIndex = 17;
             but_ban9.Text = "Bàn 9";
             but_ban9.UseVisualStyleBackColor = false;
+            but_ban9.Click += but_ban9_Click;
             // 
             // but_ban12
             // 
@@ -236,6 +252,7 @@
             but_ban12.TabIndex = 18;
             but_ban12.Text = "Bàn 12";
             but_ban12.UseVisualStyleBackColor = false;
+            but_ban12.Click += but_ban12_Click;
             // 
             // but_ban10
             // 
@@ -247,6 +264,7 @@
             but_ban10.TabIndex = 19;
             but_ban10.Text = "Bàn 10";
             but_ban10.UseVisualStyleBackColor = false;
+            but_ban10.Click += but_ban10_Click;
             // 
             // but_ban5
             // 
@@ -258,6 +276,7 @@
             but_ban5.TabIndex = 20;
             but_ban5.Text = "Bàn 5";
             but_ban5.UseVisualStyleBackColor = false;
+            but_ban5.Click += but_ban5_Click;
             // 
             // but_ban4
             // 
@@ -269,6 +288,7 @@
             but_ban4.TabIndex = 21;
             but_ban4.Text = "Bàn 4";
             but_ban4.UseVisualStyleBackColor = false;
+            but_ban4.Click += but_ban4_Click;
             // 
             // fTable
             // 
