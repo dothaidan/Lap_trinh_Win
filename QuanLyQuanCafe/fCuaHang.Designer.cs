@@ -83,7 +83,27 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.txb_CategoryID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_quaylai = new System.Windows.Forms.Button();
+            this.btn_thoat = new System.Windows.Forms.Button();
+            this.dTP_ngaythangnam = new System.Windows.Forms.DateTimePicker();
+            this.lab_maban = new System.Windows.Forms.Label();
+            this.lab_madon = new System.Windows.Forms.Label();
+            this.lab_soluong = new System.Windows.Forms.Label();
+            this.lab_nhanvien = new System.Windows.Forms.Label();
+            this.lab_tenkhach = new System.Windows.Forms.Label();
+            this.lab_donvi = new System.Windows.Forms.Label();
+            this.txB_maban = new System.Windows.Forms.TextBox();
+            this.txB_madon = new System.Windows.Forms.TextBox();
+            this.txB_soluong = new System.Windows.Forms.TextBox();
+            this.txB_nhanvien = new System.Windows.Forms.TextBox();
+            this.txB_khachhang = new System.Windows.Forms.TextBox();
+            this.txB_donvi = new System.Windows.Forms.TextBox();
+            this.dGV_hienthi = new System.Windows.Forms.DataGridView();
+            this.txB_tongtien = new System.Windows.Forms.TextBox();
+            this.btn_xacnhann = new System.Windows.Forms.Button();
+            this.btn_huy = new System.Windows.Forms.Button();
             this.tbControl1.SuspendLayout();
+            this.tb_Bill.SuspendLayout();
             this.tb_DoiMatKhau.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
@@ -106,6 +126,7 @@
             this.panel11.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_hienthi)).BeginInit();
             this.SuspendLayout();
             // 
             // tbControl1
@@ -123,6 +144,25 @@
             // 
             // tb_Bill
             // 
+            this.tb_Bill.Controls.Add(this.btn_huy);
+            this.tb_Bill.Controls.Add(this.btn_xacnhann);
+            this.tb_Bill.Controls.Add(this.txB_tongtien);
+            this.tb_Bill.Controls.Add(this.dGV_hienthi);
+            this.tb_Bill.Controls.Add(this.txB_donvi);
+            this.tb_Bill.Controls.Add(this.txB_khachhang);
+            this.tb_Bill.Controls.Add(this.txB_nhanvien);
+            this.tb_Bill.Controls.Add(this.txB_soluong);
+            this.tb_Bill.Controls.Add(this.txB_madon);
+            this.tb_Bill.Controls.Add(this.txB_maban);
+            this.tb_Bill.Controls.Add(this.lab_donvi);
+            this.tb_Bill.Controls.Add(this.lab_tenkhach);
+            this.tb_Bill.Controls.Add(this.lab_nhanvien);
+            this.tb_Bill.Controls.Add(this.lab_soluong);
+            this.tb_Bill.Controls.Add(this.lab_madon);
+            this.tb_Bill.Controls.Add(this.lab_maban);
+            this.tb_Bill.Controls.Add(this.dTP_ngaythangnam);
+            this.tb_Bill.Controls.Add(this.btn_thoat);
+            this.tb_Bill.Controls.Add(this.btn_quaylai);
             this.tb_Bill.Location = new System.Drawing.Point(4, 29);
             this.tb_Bill.Name = "tb_Bill";
             this.tb_Bill.Padding = new System.Windows.Forms.Padding(3);
@@ -641,15 +681,197 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "ID:";
             // 
+            // btn_quaylai
+            // 
+            this.btn_quaylai.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_quaylai.ForeColor = System.Drawing.Color.Blue;
+            this.btn_quaylai.Location = new System.Drawing.Point(6, 11);
+            this.btn_quaylai.Name = "btn_quaylai";
+            this.btn_quaylai.Size = new System.Drawing.Size(93, 29);
+            this.btn_quaylai.TabIndex = 0;
+            this.btn_quaylai.Text = "Quay lại";
+            this.btn_quaylai.UseVisualStyleBackColor = true;
+            this.btn_quaylai.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_thoat.ForeColor = System.Drawing.Color.Yellow;
+            this.btn_thoat.Location = new System.Drawing.Point(6, 46);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(93, 29);
+            this.btn_thoat.TabIndex = 1;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            // 
+            // dTP_ngaythangnam
+            // 
+            this.dTP_ngaythangnam.CalendarForeColor = System.Drawing.SystemColors.ControlDark;
+            this.dTP_ngaythangnam.Location = new System.Drawing.Point(313, 11);
+            this.dTP_ngaythangnam.Name = "dTP_ngaythangnam";
+            this.dTP_ngaythangnam.Size = new System.Drawing.Size(250, 25);
+            this.dTP_ngaythangnam.TabIndex = 2;
+            // 
+            // lab_maban
+            // 
+            this.lab_maban.AutoSize = true;
+            this.lab_maban.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lab_maban.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lab_maban.Location = new System.Drawing.Point(124, 47);
+            this.lab_maban.Name = "lab_maban";
+            this.lab_maban.Size = new System.Drawing.Size(63, 19);
+            this.lab_maban.TabIndex = 3;
+            this.lab_maban.Text = "Mã bàn";
+            // 
+            // lab_madon
+            // 
+            this.lab_madon.AutoSize = true;
+            this.lab_madon.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lab_madon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lab_madon.Location = new System.Drawing.Point(121, 81);
+            this.lab_madon.Name = "lab_madon";
+            this.lab_madon.Size = new System.Drawing.Size(66, 19);
+            this.lab_madon.TabIndex = 4;
+            this.lab_madon.Text = "Mã đơn";
+            // 
+            // lab_soluong
+            // 
+            this.lab_soluong.AutoSize = true;
+            this.lab_soluong.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lab_soluong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lab_soluong.Location = new System.Drawing.Point(121, 119);
+            this.lab_soluong.Name = "lab_soluong";
+            this.lab_soluong.Size = new System.Drawing.Size(77, 19);
+            this.lab_soluong.TabIndex = 5;
+            this.lab_soluong.Text = "Số lượng";
+            // 
+            // lab_nhanvien
+            // 
+            this.lab_nhanvien.AutoSize = true;
+            this.lab_nhanvien.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lab_nhanvien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lab_nhanvien.Location = new System.Drawing.Point(427, 46);
+            this.lab_nhanvien.Name = "lab_nhanvien";
+            this.lab_nhanvien.Size = new System.Drawing.Size(150, 19);
+            this.lab_nhanvien.TabIndex = 6;
+            this.lab_nhanvien.Text = "Mã nhân viên order";
+            this.lab_nhanvien.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // lab_tenkhach
+            // 
+            this.lab_tenkhach.AutoSize = true;
+            this.lab_tenkhach.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lab_tenkhach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lab_tenkhach.Location = new System.Drawing.Point(427, 81);
+            this.lab_tenkhach.Name = "lab_tenkhach";
+            this.lab_tenkhach.Size = new System.Drawing.Size(126, 19);
+            this.lab_tenkhach.TabIndex = 7;
+            this.lab_tenkhach.Text = "Tên khách hàng";
+            this.lab_tenkhach.Click += new System.EventHandler(this.lab_tenkhach_Click);
+            // 
+            // lab_donvi
+            // 
+            this.lab_donvi.AutoSize = true;
+            this.lab_donvi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lab_donvi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lab_donvi.Location = new System.Drawing.Point(427, 122);
+            this.lab_donvi.Name = "lab_donvi";
+            this.lab_donvi.Size = new System.Drawing.Size(88, 19);
+            this.lab_donvi.TabIndex = 8;
+            this.lab_donvi.Text = "Đơn vị tiền";
+            // 
+            // txB_maban
+            // 
+            this.txB_maban.Location = new System.Drawing.Point(204, 41);
+            this.txB_maban.Name = "txB_maban";
+            this.txB_maban.Size = new System.Drawing.Size(188, 25);
+            this.txB_maban.TabIndex = 10;
+            // 
+            // txB_madon
+            // 
+            this.txB_madon.Location = new System.Drawing.Point(204, 77);
+            this.txB_madon.Name = "txB_madon";
+            this.txB_madon.Size = new System.Drawing.Size(188, 25);
+            this.txB_madon.TabIndex = 11;
+            // 
+            // txB_soluong
+            // 
+            this.txB_soluong.Location = new System.Drawing.Point(204, 115);
+            this.txB_soluong.Name = "txB_soluong";
+            this.txB_soluong.Size = new System.Drawing.Size(188, 25);
+            this.txB_soluong.TabIndex = 12;
+            // 
+            // txB_nhanvien
+            // 
+            this.txB_nhanvien.Location = new System.Drawing.Point(593, 42);
+            this.txB_nhanvien.Name = "txB_nhanvien";
+            this.txB_nhanvien.Size = new System.Drawing.Size(188, 25);
+            this.txB_nhanvien.TabIndex = 13;
+            // 
+            // txB_khachhang
+            // 
+            this.txB_khachhang.Location = new System.Drawing.Point(593, 80);
+            this.txB_khachhang.Name = "txB_khachhang";
+            this.txB_khachhang.Size = new System.Drawing.Size(188, 25);
+            this.txB_khachhang.TabIndex = 14;
+            // 
+            // txB_donvi
+            // 
+            this.txB_donvi.Location = new System.Drawing.Point(593, 116);
+            this.txB_donvi.Name = "txB_donvi";
+            this.txB_donvi.Size = new System.Drawing.Size(188, 25);
+            this.txB_donvi.TabIndex = 15;
+            // 
+            // dGV_hienthi
+            // 
+            this.dGV_hienthi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_hienthi.Location = new System.Drawing.Point(124, 173);
+            this.dGV_hienthi.Name = "dGV_hienthi";
+            this.dGV_hienthi.RowHeadersWidth = 51;
+            this.dGV_hienthi.RowTemplate.Height = 29;
+            this.dGV_hienthi.Size = new System.Drawing.Size(657, 254);
+            this.dGV_hienthi.TabIndex = 16;
+            // 
+            // txB_tongtien
+            // 
+            this.txB_tongtien.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txB_tongtien.Location = new System.Drawing.Point(124, 433);
+            this.txB_tongtien.Name = "txB_tongtien";
+            this.txB_tongtien.Size = new System.Drawing.Size(657, 27);
+            this.txB_tongtien.TabIndex = 17;
+            this.txB_tongtien.Text = "Tổng tiền:";
+            // 
+            // btn_xacnhann
+            // 
+            this.btn_xacnhann.ForeColor = System.Drawing.Color.Lime;
+            this.btn_xacnhann.Location = new System.Drawing.Point(56, 307);
+            this.btn_xacnhann.Name = "btn_xacnhann";
+            this.btn_xacnhann.Size = new System.Drawing.Size(43, 29);
+            this.btn_xacnhann.TabIndex = 18;
+            this.btn_xacnhann.Text = "✔";
+            this.btn_xacnhann.UseVisualStyleBackColor = true;
+            // 
+            // btn_huy
+            // 
+            this.btn_huy.ForeColor = System.Drawing.Color.Red;
+            this.btn_huy.Location = new System.Drawing.Point(56, 368);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(43, 29);
+            this.btn_huy.TabIndex = 19;
+            this.btn_huy.Text = "✘";
+            this.btn_huy.UseVisualStyleBackColor = true;
+            // 
             // fCuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 513);
+            this.ClientSize = new System.Drawing.Size(803, 513);
             this.Controls.Add(this.tbControl1);
             this.Name = "fCuaHang";
             this.Text = "Cửa Hàng";
             this.tbControl1.ResumeLayout(false);
+            this.tb_Bill.ResumeLayout(false);
+            this.tb_Bill.PerformLayout();
             this.tb_DoiMatKhau.ResumeLayout(false);
             this.tb_DoiMatKhau.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -683,6 +905,7 @@
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_hienthi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -743,5 +966,24 @@
         private PictureBox pictureBox1;
         private Panel panel13;
         private TextBox teB_nhaplaimatkhau;
+        private Button btn_thoat;
+        private Button btn_quaylai;
+        private TextBox txB_nhanvien;
+        private TextBox txB_soluong;
+        private TextBox txB_madon;
+        private TextBox txB_maban;
+        private Label lab_donvi;
+        private Label lab_tenkhach;
+        private Label lab_nhanvien;
+        private Label lab_soluong;
+        private Label lab_madon;
+        private Label lab_maban;
+        private DateTimePicker dTP_ngaythangnam;
+        private Button btn_huy;
+        private Button btn_xacnhann;
+        private TextBox txB_tongtien;
+        private DataGridView dGV_hienthi;
+        private TextBox txB_donvi;
+        private TextBox txB_khachhang;
     }
 }
