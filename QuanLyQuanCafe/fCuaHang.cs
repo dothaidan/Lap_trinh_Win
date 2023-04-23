@@ -1,7 +1,9 @@
-﻿using System;
+﻿using QuanLyQuanCafe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +17,18 @@ namespace QuanLyQuanCafe
         public fCuaHang()
         {
             InitializeComponent();
+           LoadListFood();
         }
+        #region method
+        void LoadListFood()
+        {
+            dtgv_Food.DataSource = foodDAO.Instance.GetListFood();
+        }
+
+
+        #endregion
+
+        #region Events
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -51,5 +64,11 @@ namespace QuanLyQuanCafe
         {
 
         }
+
+        private void but_ShowFood_Click(object sender, EventArgs e)
+        {
+            LoadListFood();
+        }
+        #endregion
     }
 }

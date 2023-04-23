@@ -29,928 +29,867 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCuaHang));
-            this.tb_FoodCategory = new System.Windows.Forms.TabPage();
-            this.dtgv_Category = new System.Windows.Forms.DataGridView();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.but_ShowCategory = new System.Windows.Forms.Button();
-            this.but_EditCategory = new System.Windows.Forms.Button();
-            this.but_DeleteCategory = new System.Windows.Forms.Button();
-            this.but_AddCategory = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.txb_CategoryName = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.txb_CategoryID = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tb_Food = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txb_SearchFoodName = new System.Windows.Forms.TextBox();
-            this.but_SearchFood = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.but_ShowFood = new System.Windows.Forms.Button();
-            this.but_EditFood = new System.Windows.Forms.Button();
-            this.but_DeleteFood = new System.Windows.Forms.Button();
-            this.but_AddFood = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.nm_FoodPrice = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.cob_FoodCategory = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txb_FoodName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txb_FoodID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dtgv_Food = new System.Windows.Forms.DataGridView();
-            this.tb_DoiMatKhau = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.teB_nhaplaimatkhau = new System.Windows.Forms.TextBox();
-            this.lab_nhaplaimatkhau = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.teB_matkhaumoi = new System.Windows.Forms.TextBox();
-            this.lab_matkhaumoi = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Teb_username = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.lab_matkhaucu = new System.Windows.Forms.Label();
-            this.teB_matkhaucu = new System.Windows.Forms.TextBox();
-            this.btn_huybo = new System.Windows.Forms.Button();
-            this.btn_xacnhan = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tb_Bill = new System.Windows.Forms.TabPage();
-            this.btn_huy = new System.Windows.Forms.Button();
-            this.btn_xacnhann = new System.Windows.Forms.Button();
-            this.txB_tongtien = new System.Windows.Forms.TextBox();
-            this.txB_donvi = new System.Windows.Forms.TextBox();
-            this.txB_khachhang = new System.Windows.Forms.TextBox();
-            this.txB_soluong = new System.Windows.Forms.TextBox();
-            this.txB_madon = new System.Windows.Forms.TextBox();
-            this.txB_maban = new System.Windows.Forms.TextBox();
-            this.dGV_hienthi = new System.Windows.Forms.DataGridView();
-            this.lab_donvi = new System.Windows.Forms.Label();
-            this.lab_tenkhach = new System.Windows.Forms.Label();
-            this.lab_soluong = new System.Windows.Forms.Label();
-            this.lab_madon = new System.Windows.Forms.Label();
-            this.lab_maban = new System.Windows.Forms.Label();
-            this.dTP_ngaythangnam = new System.Windows.Forms.DateTimePicker();
-            this.tbControl1 = new System.Windows.Forms.TabControl();
-            this.tb_FoodCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Category)).BeginInit();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.tb_Food.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nm_FoodPrice)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Food)).BeginInit();
-            this.tb_DoiMatKhau.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.tb_Bill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_hienthi)).BeginInit();
-            this.tbControl1.SuspendLayout();
-            this.SuspendLayout();
+            tb_FoodCategory = new TabPage();
+            dtgv_Category = new DataGridView();
+            panel10 = new Panel();
+            but_ShowCategory = new Button();
+            but_EditCategory = new Button();
+            but_DeleteCategory = new Button();
+            but_AddCategory = new Button();
+            panel11 = new Panel();
+            panel14 = new Panel();
+            txb_CategoryName = new TextBox();
+            label7 = new Label();
+            panel15 = new Panel();
+            txb_CategoryID = new TextBox();
+            label8 = new Label();
+            tb_Food = new TabPage();
+            panel4 = new Panel();
+            txb_SearchFoodName = new TextBox();
+            but_SearchFood = new Button();
+            panel3 = new Panel();
+            but_ShowFood = new Button();
+            but_EditFood = new Button();
+            but_DeleteFood = new Button();
+            but_AddFood = new Button();
+            panel2 = new Panel();
+            panel8 = new Panel();
+            nm_FoodPrice = new NumericUpDown();
+            label4 = new Label();
+            panel7 = new Panel();
+            cob_FoodCategory = new ComboBox();
+            label3 = new Label();
+            panel6 = new Panel();
+            txb_FoodName = new TextBox();
+            label2 = new Label();
+            panel5 = new Panel();
+            txb_FoodID = new TextBox();
+            label1 = new Label();
+            panel1 = new Panel();
+            dtgv_Food = new DataGridView();
+            tb_DoiMatKhau = new TabPage();
+            pictureBox1 = new PictureBox();
+            panel13 = new Panel();
+            teB_nhaplaimatkhau = new TextBox();
+            lab_nhaplaimatkhau = new Label();
+            panel12 = new Panel();
+            teB_matkhaumoi = new TextBox();
+            lab_matkhaumoi = new Label();
+            panel16 = new Panel();
+            label6 = new Label();
+            Teb_username = new TextBox();
+            panel9 = new Panel();
+            lab_matkhaucu = new Label();
+            teB_matkhaucu = new TextBox();
+            btn_huybo = new Button();
+            btn_xacnhan = new Button();
+            label5 = new Label();
+            tb_Bill = new TabPage();
+            btn_huy = new Button();
+            btn_xacnhann = new Button();
+            txB_tongtien = new TextBox();
+            txB_donvi = new TextBox();
+            txB_khachhang = new TextBox();
+            txB_soluong = new TextBox();
+            txB_madon = new TextBox();
+            txB_maban = new TextBox();
+            dGV_hienthi = new DataGridView();
+            lab_donvi = new Label();
+            lab_tenkhach = new Label();
+            lab_soluong = new Label();
+            lab_madon = new Label();
+            lab_maban = new Label();
+            dTP_ngaythangnam = new DateTimePicker();
+            tbControl1 = new TabControl();
+            tb_FoodCategory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgv_Category).BeginInit();
+            panel10.SuspendLayout();
+            panel11.SuspendLayout();
+            panel14.SuspendLayout();
+            panel15.SuspendLayout();
+            tb_Food.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nm_FoodPrice).BeginInit();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgv_Food).BeginInit();
+            tb_DoiMatKhau.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel13.SuspendLayout();
+            panel12.SuspendLayout();
+            panel16.SuspendLayout();
+            panel9.SuspendLayout();
+            tb_Bill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dGV_hienthi).BeginInit();
+            tbControl1.SuspendLayout();
+            SuspendLayout();
             // 
             // tb_FoodCategory
             // 
-            this.tb_FoodCategory.Controls.Add(this.dtgv_Category);
-            this.tb_FoodCategory.Controls.Add(this.panel10);
-            this.tb_FoodCategory.Controls.Add(this.panel11);
-            this.tb_FoodCategory.Location = new System.Drawing.Point(4, 25);
-            this.tb_FoodCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_FoodCategory.Name = "tb_FoodCategory";
-            this.tb_FoodCategory.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_FoodCategory.Size = new System.Drawing.Size(766, 351);
-            this.tb_FoodCategory.TabIndex = 3;
-            this.tb_FoodCategory.Text = "Danh mục";
-            this.tb_FoodCategory.UseVisualStyleBackColor = true;
+            tb_FoodCategory.Controls.Add(dtgv_Category);
+            tb_FoodCategory.Controls.Add(panel10);
+            tb_FoodCategory.Controls.Add(panel11);
+            tb_FoodCategory.Location = new Point(4, 29);
+            tb_FoodCategory.Name = "tb_FoodCategory";
+            tb_FoodCategory.Padding = new Padding(3, 3, 3, 3);
+            tb_FoodCategory.Size = new Size(877, 474);
+            tb_FoodCategory.TabIndex = 3;
+            tb_FoodCategory.Text = "Danh mục";
+            tb_FoodCategory.UseVisualStyleBackColor = true;
             // 
             // dtgv_Category
             // 
-            this.dtgv_Category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Category.Location = new System.Drawing.Point(5, 73);
-            this.dtgv_Category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgv_Category.Name = "dtgv_Category";
-            this.dtgv_Category.RowHeadersWidth = 51;
-            this.dtgv_Category.RowTemplate.Height = 29;
-            this.dtgv_Category.Size = new System.Drawing.Size(373, 278);
-            this.dtgv_Category.TabIndex = 4;
+            dtgv_Category.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgv_Category.Location = new Point(6, 97);
+            dtgv_Category.Name = "dtgv_Category";
+            dtgv_Category.RowHeadersWidth = 51;
+            dtgv_Category.RowTemplate.Height = 29;
+            dtgv_Category.Size = new Size(426, 371);
+            dtgv_Category.TabIndex = 4;
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.but_ShowCategory);
-            this.panel10.Controls.Add(this.but_EditCategory);
-            this.panel10.Controls.Add(this.but_DeleteCategory);
-            this.panel10.Controls.Add(this.but_AddCategory);
-            this.panel10.Location = new System.Drawing.Point(8, 7);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(370, 62);
-            this.panel10.TabIndex = 6;
+            panel10.Controls.Add(but_ShowCategory);
+            panel10.Controls.Add(but_EditCategory);
+            panel10.Controls.Add(but_DeleteCategory);
+            panel10.Controls.Add(but_AddCategory);
+            panel10.Location = new Point(9, 9);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(423, 83);
+            panel10.TabIndex = 6;
             // 
             // but_ShowCategory
             // 
-            this.but_ShowCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_ShowCategory.Location = new System.Drawing.Point(285, 2);
-            this.but_ShowCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_ShowCategory.Name = "but_ShowCategory";
-            this.but_ShowCategory.Size = new System.Drawing.Size(82, 57);
-            this.but_ShowCategory.TabIndex = 3;
-            this.but_ShowCategory.Text = "Xem";
-            this.but_ShowCategory.UseVisualStyleBackColor = true;
+            but_ShowCategory.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_ShowCategory.Location = new Point(326, 3);
+            but_ShowCategory.Name = "but_ShowCategory";
+            but_ShowCategory.Size = new Size(94, 76);
+            but_ShowCategory.TabIndex = 3;
+            but_ShowCategory.Text = "Xem";
+            but_ShowCategory.UseVisualStyleBackColor = true;
             // 
             // but_EditCategory
             // 
-            this.but_EditCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_EditCategory.Location = new System.Drawing.Point(198, 2);
-            this.but_EditCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_EditCategory.Name = "but_EditCategory";
-            this.but_EditCategory.Size = new System.Drawing.Size(82, 57);
-            this.but_EditCategory.TabIndex = 2;
-            this.but_EditCategory.Text = "Sửa";
-            this.but_EditCategory.UseVisualStyleBackColor = true;
+            but_EditCategory.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_EditCategory.Location = new Point(226, 3);
+            but_EditCategory.Name = "but_EditCategory";
+            but_EditCategory.Size = new Size(94, 76);
+            but_EditCategory.TabIndex = 2;
+            but_EditCategory.Text = "Sửa";
+            but_EditCategory.UseVisualStyleBackColor = true;
             // 
             // but_DeleteCategory
             // 
-            this.but_DeleteCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_DeleteCategory.Location = new System.Drawing.Point(90, 2);
-            this.but_DeleteCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_DeleteCategory.Name = "but_DeleteCategory";
-            this.but_DeleteCategory.Size = new System.Drawing.Size(82, 57);
-            this.but_DeleteCategory.TabIndex = 1;
-            this.but_DeleteCategory.Text = "Xóa";
-            this.but_DeleteCategory.UseVisualStyleBackColor = true;
+            but_DeleteCategory.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_DeleteCategory.Location = new Point(103, 3);
+            but_DeleteCategory.Name = "but_DeleteCategory";
+            but_DeleteCategory.Size = new Size(94, 76);
+            but_DeleteCategory.TabIndex = 1;
+            but_DeleteCategory.Text = "Xóa";
+            but_DeleteCategory.UseVisualStyleBackColor = true;
             // 
             // but_AddCategory
             // 
-            this.but_AddCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_AddCategory.Location = new System.Drawing.Point(3, 2);
-            this.but_AddCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_AddCategory.Name = "but_AddCategory";
-            this.but_AddCategory.Size = new System.Drawing.Size(82, 57);
-            this.but_AddCategory.TabIndex = 0;
-            this.but_AddCategory.Text = "Thêm";
-            this.but_AddCategory.UseVisualStyleBackColor = true;
+            but_AddCategory.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_AddCategory.Location = new Point(3, 3);
+            but_AddCategory.Name = "but_AddCategory";
+            but_AddCategory.Size = new Size(94, 76);
+            but_AddCategory.TabIndex = 0;
+            but_AddCategory.Text = "Thêm";
+            but_AddCategory.UseVisualStyleBackColor = true;
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.panel14);
-            this.panel11.Controls.Add(this.panel15);
-            this.panel11.Location = new System.Drawing.Point(383, 73);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(380, 281);
-            this.panel11.TabIndex = 5;
+            panel11.Controls.Add(panel14);
+            panel11.Controls.Add(panel15);
+            panel11.Location = new Point(438, 97);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(434, 375);
+            panel11.TabIndex = 5;
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.txb_CategoryName);
-            this.panel14.Controls.Add(this.label7);
-            this.panel14.Location = new System.Drawing.Point(3, 51);
-            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(374, 45);
-            this.panel14.TabIndex = 1;
+            panel14.Controls.Add(txb_CategoryName);
+            panel14.Controls.Add(label7);
+            panel14.Location = new Point(3, 68);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(427, 60);
+            panel14.TabIndex = 1;
             // 
             // txb_CategoryName
             // 
-            this.txb_CategoryName.Location = new System.Drawing.Point(129, 17);
-            this.txb_CategoryName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txb_CategoryName.Name = "txb_CategoryName";
-            this.txb_CategoryName.Size = new System.Drawing.Size(246, 21);
-            this.txb_CategoryName.TabIndex = 3;
+            txb_CategoryName.Location = new Point(147, 23);
+            txb_CategoryName.Name = "txb_CategoryName";
+            txb_CategoryName.Size = new Size(281, 25);
+            txb_CategoryName.TabIndex = 3;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(13, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 23);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Tên danh mục:";
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(15, 23);
+            label7.Name = "label7";
+            label7.Size = new Size(135, 27);
+            label7.TabIndex = 0;
+            label7.Text = "Tên danh mục:";
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.txb_CategoryID);
-            this.panel15.Controls.Add(this.label8);
-            this.panel15.Location = new System.Drawing.Point(3, 2);
-            this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(374, 44);
-            this.panel15.TabIndex = 0;
+            panel15.Controls.Add(txb_CategoryID);
+            panel15.Controls.Add(label8);
+            panel15.Location = new Point(3, 3);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(427, 59);
+            panel15.TabIndex = 0;
             // 
             // txb_CategoryID
             // 
-            this.txb_CategoryID.Location = new System.Drawing.Point(129, 16);
-            this.txb_CategoryID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txb_CategoryID.Name = "txb_CategoryID";
-            this.txb_CategoryID.ReadOnly = true;
-            this.txb_CategoryID.Size = new System.Drawing.Size(246, 21);
-            this.txb_CategoryID.TabIndex = 3;
+            txb_CategoryID.Location = new Point(147, 21);
+            txb_CategoryID.Name = "txb_CategoryID";
+            txb_CategoryID.ReadOnly = true;
+            txb_CategoryID.Size = new Size(281, 25);
+            txb_CategoryID.TabIndex = 3;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(13, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 23);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "ID:";
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(15, 21);
+            label8.Name = "label8";
+            label8.Size = new Size(35, 27);
+            label8.TabIndex = 0;
+            label8.Text = "ID:";
             // 
             // tb_Food
             // 
-            this.tb_Food.Controls.Add(this.panel4);
-            this.tb_Food.Controls.Add(this.panel3);
-            this.tb_Food.Controls.Add(this.panel2);
-            this.tb_Food.Controls.Add(this.panel1);
-            this.tb_Food.Location = new System.Drawing.Point(4, 25);
-            this.tb_Food.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_Food.Name = "tb_Food";
-            this.tb_Food.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_Food.Size = new System.Drawing.Size(766, 351);
-            this.tb_Food.TabIndex = 2;
-            this.tb_Food.Text = "Sản Phẩm";
-            this.tb_Food.UseVisualStyleBackColor = true;
+            tb_Food.Controls.Add(panel4);
+            tb_Food.Controls.Add(panel3);
+            tb_Food.Controls.Add(panel2);
+            tb_Food.Controls.Add(panel1);
+            tb_Food.Location = new Point(4, 29);
+            tb_Food.Name = "tb_Food";
+            tb_Food.Padding = new Padding(3, 3, 3, 3);
+            tb_Food.Size = new Size(877, 474);
+            tb_Food.TabIndex = 2;
+            tb_Food.Text = "Sản Phẩm";
+            tb_Food.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.txb_SearchFoodName);
-            this.panel4.Controls.Add(this.but_SearchFood);
-            this.panel4.Location = new System.Drawing.Point(381, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(380, 62);
-            this.panel4.TabIndex = 3;
+            panel4.Controls.Add(txb_SearchFoodName);
+            panel4.Controls.Add(but_SearchFood);
+            panel4.Location = new Point(435, 5);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(434, 83);
+            panel4.TabIndex = 3;
             // 
             // txb_SearchFoodName
             // 
-            this.txb_SearchFoodName.Location = new System.Drawing.Point(3, 21);
-            this.txb_SearchFoodName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txb_SearchFoodName.Name = "txb_SearchFoodName";
-            this.txb_SearchFoodName.Size = new System.Drawing.Size(288, 21);
-            this.txb_SearchFoodName.TabIndex = 2;
+            txb_SearchFoodName.Location = new Point(3, 28);
+            txb_SearchFoodName.Name = "txb_SearchFoodName";
+            txb_SearchFoodName.Size = new Size(329, 25);
+            txb_SearchFoodName.TabIndex = 2;
             // 
             // but_SearchFood
             // 
-            this.but_SearchFood.Location = new System.Drawing.Point(295, 2);
-            this.but_SearchFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_SearchFood.Name = "but_SearchFood";
-            this.but_SearchFood.Size = new System.Drawing.Size(82, 57);
-            this.but_SearchFood.TabIndex = 1;
-            this.but_SearchFood.Text = "Tìm";
-            this.but_SearchFood.UseVisualStyleBackColor = true;
+            but_SearchFood.Location = new Point(337, 3);
+            but_SearchFood.Name = "but_SearchFood";
+            but_SearchFood.Size = new Size(94, 76);
+            but_SearchFood.TabIndex = 1;
+            but_SearchFood.Text = "Tìm";
+            but_SearchFood.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.but_ShowFood);
-            this.panel3.Controls.Add(this.but_EditFood);
-            this.panel3.Controls.Add(this.but_DeleteFood);
-            this.panel3.Controls.Add(this.but_AddFood);
-            this.panel3.Location = new System.Drawing.Point(5, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 62);
-            this.panel3.TabIndex = 2;
+            panel3.Controls.Add(but_ShowFood);
+            panel3.Controls.Add(but_EditFood);
+            panel3.Controls.Add(but_DeleteFood);
+            panel3.Controls.Add(but_AddFood);
+            panel3.Location = new Point(6, 5);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(423, 83);
+            panel3.TabIndex = 2;
             // 
             // but_ShowFood
             // 
-            this.but_ShowFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_ShowFood.Location = new System.Drawing.Point(285, 2);
-            this.but_ShowFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_ShowFood.Name = "but_ShowFood";
-            this.but_ShowFood.Size = new System.Drawing.Size(82, 57);
-            this.but_ShowFood.TabIndex = 3;
-            this.but_ShowFood.Text = "Xem";
-            this.but_ShowFood.UseVisualStyleBackColor = true;
+            but_ShowFood.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_ShowFood.Location = new Point(326, 3);
+            but_ShowFood.Name = "but_ShowFood";
+            but_ShowFood.Size = new Size(94, 76);
+            but_ShowFood.TabIndex = 3;
+            but_ShowFood.Text = "Xem";
+            but_ShowFood.UseVisualStyleBackColor = true;
+            but_ShowFood.Click += but_ShowFood_Click;
             // 
             // but_EditFood
             // 
-            this.but_EditFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_EditFood.Location = new System.Drawing.Point(198, 2);
-            this.but_EditFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_EditFood.Name = "but_EditFood";
-            this.but_EditFood.Size = new System.Drawing.Size(82, 57);
-            this.but_EditFood.TabIndex = 2;
-            this.but_EditFood.Text = "Sửa";
-            this.but_EditFood.UseVisualStyleBackColor = true;
+            but_EditFood.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_EditFood.Location = new Point(226, 3);
+            but_EditFood.Name = "but_EditFood";
+            but_EditFood.Size = new Size(94, 76);
+            but_EditFood.TabIndex = 2;
+            but_EditFood.Text = "Sửa";
+            but_EditFood.UseVisualStyleBackColor = true;
             // 
             // but_DeleteFood
             // 
-            this.but_DeleteFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_DeleteFood.Location = new System.Drawing.Point(90, 2);
-            this.but_DeleteFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_DeleteFood.Name = "but_DeleteFood";
-            this.but_DeleteFood.Size = new System.Drawing.Size(82, 57);
-            this.but_DeleteFood.TabIndex = 1;
-            this.but_DeleteFood.Text = "Xóa";
-            this.but_DeleteFood.UseVisualStyleBackColor = true;
+            but_DeleteFood.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_DeleteFood.Location = new Point(103, 3);
+            but_DeleteFood.Name = "but_DeleteFood";
+            but_DeleteFood.Size = new Size(94, 76);
+            but_DeleteFood.TabIndex = 1;
+            but_DeleteFood.Text = "Xóa";
+            but_DeleteFood.UseVisualStyleBackColor = true;
             // 
             // but_AddFood
             // 
-            this.but_AddFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.but_AddFood.Location = new System.Drawing.Point(3, 2);
-            this.but_AddFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.but_AddFood.Name = "but_AddFood";
-            this.but_AddFood.Size = new System.Drawing.Size(82, 57);
-            this.but_AddFood.TabIndex = 0;
-            this.but_AddFood.Text = "Thêm";
-            this.but_AddFood.UseVisualStyleBackColor = true;
+            but_AddFood.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            but_AddFood.Location = new Point(3, 3);
+            but_AddFood.Name = "but_AddFood";
+            but_AddFood.Size = new Size(94, 76);
+            but_AddFood.TabIndex = 0;
+            but_AddFood.Text = "Thêm";
+            but_AddFood.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(381, 70);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 281);
-            this.panel2.TabIndex = 1;
+            panel2.Controls.Add(panel8);
+            panel2.Controls.Add(panel7);
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(panel5);
+            panel2.Location = new Point(435, 93);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(434, 375);
+            panel2.TabIndex = 1;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.nm_FoodPrice);
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(3, 154);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(374, 45);
-            this.panel8.TabIndex = 3;
+            panel8.Controls.Add(nm_FoodPrice);
+            panel8.Controls.Add(label4);
+            panel8.Location = new Point(3, 205);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(427, 60);
+            panel8.TabIndex = 3;
             // 
             // nm_FoodPrice
             // 
-            this.nm_FoodPrice.Location = new System.Drawing.Point(109, 17);
-            this.nm_FoodPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nm_FoodPrice.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.nm_FoodPrice.Name = "nm_FoodPrice";
-            this.nm_FoodPrice.Size = new System.Drawing.Size(262, 21);
-            this.nm_FoodPrice.TabIndex = 1;
+            nm_FoodPrice.Location = new Point(125, 23);
+            nm_FoodPrice.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            nm_FoodPrice.Name = "nm_FoodPrice";
+            nm_FoodPrice.Size = new Size(299, 25);
+            nm_FoodPrice.TabIndex = 1;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(13, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Giá:";
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(15, 23);
+            label4.Name = "label4";
+            label4.Size = new Size(46, 27);
+            label4.TabIndex = 0;
+            label4.Text = "Giá:";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.cob_FoodCategory);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(3, 100);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(374, 50);
-            this.panel7.TabIndex = 2;
+            panel7.Controls.Add(cob_FoodCategory);
+            panel7.Controls.Add(label3);
+            panel7.Location = new Point(3, 133);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(427, 67);
+            panel7.TabIndex = 2;
             // 
             // cob_FoodCategory
             // 
-            this.cob_FoodCategory.FormattingEnabled = true;
-            this.cob_FoodCategory.Location = new System.Drawing.Point(109, 10);
-            this.cob_FoodCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cob_FoodCategory.Name = "cob_FoodCategory";
-            this.cob_FoodCategory.Size = new System.Drawing.Size(268, 24);
-            this.cob_FoodCategory.TabIndex = 1;
+            cob_FoodCategory.FormattingEnabled = true;
+            cob_FoodCategory.Location = new Point(125, 13);
+            cob_FoodCategory.Name = "cob_FoodCategory";
+            cob_FoodCategory.Size = new Size(306, 28);
+            cob_FoodCategory.TabIndex = 1;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(13, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Doanh mục:";
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(15, 13);
+            label3.Name = "label3";
+            label3.Size = new Size(112, 27);
+            label3.TabIndex = 0;
+            label3.Text = "Doanh mục:";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.txb_FoodName);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(3, 51);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(374, 45);
-            this.panel6.TabIndex = 1;
+            panel6.Controls.Add(txb_FoodName);
+            panel6.Controls.Add(label2);
+            panel6.Location = new Point(3, 68);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(427, 60);
+            panel6.TabIndex = 1;
             // 
             // txb_FoodName
             // 
-            this.txb_FoodName.Location = new System.Drawing.Point(109, 17);
-            this.txb_FoodName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txb_FoodName.Name = "txb_FoodName";
-            this.txb_FoodName.Size = new System.Drawing.Size(266, 21);
-            this.txb_FoodName.TabIndex = 3;
+            txb_FoodName.Location = new Point(125, 23);
+            txb_FoodName.Name = "txb_FoodName";
+            txb_FoodName.Size = new Size(303, 25);
+            txb_FoodName.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(13, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên món:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(15, 23);
+            label2.Name = "label2";
+            label2.Size = new Size(90, 27);
+            label2.TabIndex = 0;
+            label2.Text = "Tên món:";
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.txb_FoodID);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(3, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(374, 44);
-            this.panel5.TabIndex = 0;
+            panel5.Controls.Add(txb_FoodID);
+            panel5.Controls.Add(label1);
+            panel5.Location = new Point(3, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(427, 59);
+            panel5.TabIndex = 0;
             // 
             // txb_FoodID
             // 
-            this.txb_FoodID.Location = new System.Drawing.Point(109, 16);
-            this.txb_FoodID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txb_FoodID.Name = "txb_FoodID";
-            this.txb_FoodID.ReadOnly = true;
-            this.txb_FoodID.Size = new System.Drawing.Size(266, 21);
-            this.txb_FoodID.TabIndex = 3;
+            txb_FoodID.Location = new Point(125, 21);
+            txb_FoodID.Name = "txb_FoodID";
+            txb_FoodID.ReadOnly = true;
+            txb_FoodID.Size = new Size(303, 25);
+            txb_FoodID.TabIndex = 3;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(15, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(35, 27);
+            label1.TabIndex = 0;
+            label1.Text = "ID:";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dtgv_Food);
-            this.panel1.Location = new System.Drawing.Point(5, 70);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 281);
-            this.panel1.TabIndex = 0;
+            panel1.Controls.Add(dtgv_Food);
+            panel1.Location = new Point(6, 93);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(423, 375);
+            panel1.TabIndex = 0;
             // 
             // dtgv_Food
             // 
-            this.dtgv_Food.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Food.Location = new System.Drawing.Point(3, 2);
-            this.dtgv_Food.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgv_Food.Name = "dtgv_Food";
-            this.dtgv_Food.RowHeadersWidth = 51;
-            this.dtgv_Food.RowTemplate.Height = 29;
-            this.dtgv_Food.Size = new System.Drawing.Size(365, 277);
-            this.dtgv_Food.TabIndex = 0;
+            dtgv_Food.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgv_Food.Location = new Point(3, 3);
+            dtgv_Food.Name = "dtgv_Food";
+            dtgv_Food.RowHeadersWidth = 51;
+            dtgv_Food.RowTemplate.Height = 29;
+            dtgv_Food.Size = new Size(417, 369);
+            dtgv_Food.TabIndex = 0;
             // 
             // tb_DoiMatKhau
             // 
-            this.tb_DoiMatKhau.Controls.Add(this.pictureBox1);
-            this.tb_DoiMatKhau.Controls.Add(this.panel13);
-            this.tb_DoiMatKhau.Controls.Add(this.panel12);
-            this.tb_DoiMatKhau.Controls.Add(this.panel16);
-            this.tb_DoiMatKhau.Controls.Add(this.panel9);
-            this.tb_DoiMatKhau.Controls.Add(this.btn_huybo);
-            this.tb_DoiMatKhau.Controls.Add(this.btn_xacnhan);
-            this.tb_DoiMatKhau.Controls.Add(this.label5);
-            this.tb_DoiMatKhau.Location = new System.Drawing.Point(4, 25);
-            this.tb_DoiMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_DoiMatKhau.Name = "tb_DoiMatKhau";
-            this.tb_DoiMatKhau.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_DoiMatKhau.Size = new System.Drawing.Size(766, 351);
-            this.tb_DoiMatKhau.TabIndex = 1;
-            this.tb_DoiMatKhau.Text = "Đổi mật khẩu";
-            this.tb_DoiMatKhau.UseVisualStyleBackColor = true;
+            tb_DoiMatKhau.Controls.Add(pictureBox1);
+            tb_DoiMatKhau.Controls.Add(panel13);
+            tb_DoiMatKhau.Controls.Add(panel12);
+            tb_DoiMatKhau.Controls.Add(panel16);
+            tb_DoiMatKhau.Controls.Add(panel9);
+            tb_DoiMatKhau.Controls.Add(btn_huybo);
+            tb_DoiMatKhau.Controls.Add(btn_xacnhan);
+            tb_DoiMatKhau.Controls.Add(label5);
+            tb_DoiMatKhau.Location = new Point(4, 29);
+            tb_DoiMatKhau.Name = "tb_DoiMatKhau";
+            tb_DoiMatKhau.Padding = new Padding(3, 3, 3, 3);
+            tb_DoiMatKhau.Size = new Size(877, 474);
+            tb_DoiMatKhau.TabIndex = 1;
+            tb_DoiMatKhau.Text = "Đổi mật khẩu";
+            tb_DoiMatKhau.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(401, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(287, 230);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(458, 57);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(328, 307);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.teB_nhaplaimatkhau);
-            this.panel13.Controls.Add(this.lab_nhaplaimatkhau);
-            this.panel13.Location = new System.Drawing.Point(25, 244);
-            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(324, 61);
-            this.panel13.TabIndex = 9;
+            panel13.Controls.Add(teB_nhaplaimatkhau);
+            panel13.Controls.Add(lab_nhaplaimatkhau);
+            panel13.Location = new Point(29, 325);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(370, 81);
+            panel13.TabIndex = 9;
             // 
             // teB_nhaplaimatkhau
             // 
-            this.teB_nhaplaimatkhau.Location = new System.Drawing.Point(4, 24);
-            this.teB_nhaplaimatkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.teB_nhaplaimatkhau.Multiline = true;
-            this.teB_nhaplaimatkhau.Name = "teB_nhaplaimatkhau";
-            this.teB_nhaplaimatkhau.Size = new System.Drawing.Size(267, 27);
-            this.teB_nhaplaimatkhau.TabIndex = 6;
+            teB_nhaplaimatkhau.Location = new Point(5, 32);
+            teB_nhaplaimatkhau.Multiline = true;
+            teB_nhaplaimatkhau.Name = "teB_nhaplaimatkhau";
+            teB_nhaplaimatkhau.Size = new Size(305, 35);
+            teB_nhaplaimatkhau.TabIndex = 6;
             // 
             // lab_nhaplaimatkhau
             // 
-            this.lab_nhaplaimatkhau.AutoSize = true;
-            this.lab_nhaplaimatkhau.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_nhaplaimatkhau.Location = new System.Drawing.Point(4, 7);
-            this.lab_nhaplaimatkhau.Name = "lab_nhaplaimatkhau";
-            this.lab_nhaplaimatkhau.Size = new System.Drawing.Size(124, 16);
-            this.lab_nhaplaimatkhau.TabIndex = 3;
-            this.lab_nhaplaimatkhau.Text = "Nhập lại mật khẩu:";
+            lab_nhaplaimatkhau.AutoSize = true;
+            lab_nhaplaimatkhau.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_nhaplaimatkhau.Location = new Point(5, 9);
+            lab_nhaplaimatkhau.Name = "lab_nhaplaimatkhau";
+            lab_nhaplaimatkhau.Size = new Size(144, 19);
+            lab_nhaplaimatkhau.TabIndex = 3;
+            lab_nhaplaimatkhau.Text = "Nhập lại mật khẩu:";
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.teB_matkhaumoi);
-            this.panel12.Controls.Add(this.lab_matkhaumoi);
-            this.panel12.Location = new System.Drawing.Point(25, 180);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(324, 59);
-            this.panel12.TabIndex = 8;
+            panel12.Controls.Add(teB_matkhaumoi);
+            panel12.Controls.Add(lab_matkhaumoi);
+            panel12.Location = new Point(29, 240);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(370, 79);
+            panel12.TabIndex = 8;
             // 
             // teB_matkhaumoi
             // 
-            this.teB_matkhaumoi.Location = new System.Drawing.Point(4, 25);
-            this.teB_matkhaumoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.teB_matkhaumoi.Multiline = true;
-            this.teB_matkhaumoi.Name = "teB_matkhaumoi";
-            this.teB_matkhaumoi.Size = new System.Drawing.Size(267, 25);
-            this.teB_matkhaumoi.TabIndex = 5;
+            teB_matkhaumoi.Location = new Point(5, 33);
+            teB_matkhaumoi.Multiline = true;
+            teB_matkhaumoi.Name = "teB_matkhaumoi";
+            teB_matkhaumoi.Size = new Size(305, 32);
+            teB_matkhaumoi.TabIndex = 5;
             // 
             // lab_matkhaumoi
             // 
-            this.lab_matkhaumoi.AutoSize = true;
-            this.lab_matkhaumoi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_matkhaumoi.Location = new System.Drawing.Point(4, 8);
-            this.lab_matkhaumoi.Name = "lab_matkhaumoi";
-            this.lab_matkhaumoi.Size = new System.Drawing.Size(96, 16);
-            this.lab_matkhaumoi.TabIndex = 4;
-            this.lab_matkhaumoi.Text = "Mật khẩu mới:";
-            this.lab_matkhaumoi.Click += new System.EventHandler(this.label10_Click);
+            lab_matkhaumoi.AutoSize = true;
+            lab_matkhaumoi.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_matkhaumoi.Location = new Point(5, 11);
+            lab_matkhaumoi.Name = "lab_matkhaumoi";
+            lab_matkhaumoi.Size = new Size(113, 19);
+            lab_matkhaumoi.TabIndex = 4;
+            lab_matkhaumoi.Text = "Mật khẩu mới:";
+            lab_matkhaumoi.Click += label10_Click;
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.label6);
-            this.panel16.Controls.Add(this.Teb_username);
-            this.panel16.Location = new System.Drawing.Point(25, 38);
-            this.panel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(324, 67);
-            this.panel16.TabIndex = 7;
+            panel16.Controls.Add(label6);
+            panel16.Controls.Add(Teb_username);
+            panel16.Location = new Point(29, 51);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(370, 89);
+            panel16.TabIndex = 7;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(4, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Tên người dùng:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(5, 19);
+            label6.Name = "label6";
+            label6.Size = new Size(131, 19);
+            label6.TabIndex = 2;
+            label6.Text = "Tên người dùng:";
+            label6.Click += label6_Click;
             // 
             // Teb_username
             // 
-            this.Teb_username.Location = new System.Drawing.Point(4, 31);
-            this.Teb_username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Teb_username.Multiline = true;
-            this.Teb_username.Name = "Teb_username";
-            this.Teb_username.Size = new System.Drawing.Size(267, 25);
-            this.Teb_username.TabIndex = 0;
+            Teb_username.Location = new Point(5, 41);
+            Teb_username.Multiline = true;
+            Teb_username.Name = "Teb_username";
+            Teb_username.Size = new Size(305, 32);
+            Teb_username.TabIndex = 0;
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.lab_matkhaucu);
-            this.panel9.Controls.Add(this.teB_matkhaucu);
-            this.panel9.Location = new System.Drawing.Point(25, 109);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(324, 67);
-            this.panel9.TabIndex = 7;
+            panel9.Controls.Add(lab_matkhaucu);
+            panel9.Controls.Add(teB_matkhaucu);
+            panel9.Location = new Point(29, 145);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(370, 89);
+            panel9.TabIndex = 7;
             // 
             // lab_matkhaucu
             // 
-            this.lab_matkhaucu.AutoSize = true;
-            this.lab_matkhaucu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_matkhaucu.Location = new System.Drawing.Point(4, 14);
-            this.lab_matkhaucu.Name = "lab_matkhaucu";
-            this.lab_matkhaucu.Size = new System.Drawing.Size(88, 16);
-            this.lab_matkhaucu.TabIndex = 2;
-            this.lab_matkhaucu.Text = "Mật khẩu cũ:";
-            this.lab_matkhaucu.Click += new System.EventHandler(this.label6_Click);
+            lab_matkhaucu.AutoSize = true;
+            lab_matkhaucu.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_matkhaucu.Location = new Point(5, 19);
+            lab_matkhaucu.Name = "lab_matkhaucu";
+            lab_matkhaucu.Size = new Size(103, 19);
+            lab_matkhaucu.TabIndex = 2;
+            lab_matkhaucu.Text = "Mật khẩu cũ:";
+            lab_matkhaucu.Click += label6_Click;
             // 
             // teB_matkhaucu
             // 
-            this.teB_matkhaucu.Location = new System.Drawing.Point(4, 31);
-            this.teB_matkhaucu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.teB_matkhaucu.Multiline = true;
-            this.teB_matkhaucu.Name = "teB_matkhaucu";
-            this.teB_matkhaucu.Size = new System.Drawing.Size(267, 25);
-            this.teB_matkhaucu.TabIndex = 0;
+            teB_matkhaucu.Location = new Point(5, 41);
+            teB_matkhaucu.Multiline = true;
+            teB_matkhaucu.Name = "teB_matkhaucu";
+            teB_matkhaucu.Size = new Size(305, 32);
+            teB_matkhaucu.TabIndex = 0;
             // 
             // btn_huybo
             // 
-            this.btn_huybo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_huybo.Location = new System.Drawing.Point(215, 315);
-            this.btn_huybo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_huybo.Name = "btn_huybo";
-            this.btn_huybo.Size = new System.Drawing.Size(82, 32);
-            this.btn_huybo.TabIndex = 6;
-            this.btn_huybo.Text = "Hủy bỏ";
-            this.btn_huybo.UseVisualStyleBackColor = true;
+            btn_huybo.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_huybo.Location = new Point(246, 420);
+            btn_huybo.Name = "btn_huybo";
+            btn_huybo.Size = new Size(94, 43);
+            btn_huybo.TabIndex = 6;
+            btn_huybo.Text = "Hủy bỏ";
+            btn_huybo.UseVisualStyleBackColor = true;
             // 
             // btn_xacnhan
             // 
-            this.btn_xacnhan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_xacnhan.Location = new System.Drawing.Point(95, 315);
-            this.btn_xacnhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_xacnhan.Name = "btn_xacnhan";
-            this.btn_xacnhan.Size = new System.Drawing.Size(82, 32);
-            this.btn_xacnhan.TabIndex = 5;
-            this.btn_xacnhan.Text = "Xác nhận";
-            this.btn_xacnhan.UseVisualStyleBackColor = true;
-            this.btn_xacnhan.Click += new System.EventHandler(this.btn_xacnhan_Click);
+            btn_xacnhan.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_xacnhan.Location = new Point(109, 420);
+            btn_xacnhan.Name = "btn_xacnhan";
+            btn_xacnhan.Size = new Size(94, 43);
+            btn_xacnhan.TabIndex = 5;
+            btn_xacnhan.Text = "Xác nhận";
+            btn_xacnhan.UseVisualStyleBackColor = true;
+            btn_xacnhan.Click += btn_xacnhan_Click;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label5.Location = new System.Drawing.Point(298, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 26);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Thay đổi mật khẩu";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial Narrow", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.Red;
+            label5.ImageAlign = ContentAlignment.TopCenter;
+            label5.Location = new Point(341, 12);
+            label5.Name = "label5";
+            label5.Size = new Size(210, 33);
+            label5.TabIndex = 1;
+            label5.Text = "Thay đổi mật khẩu";
+            label5.Click += label5_Click;
             // 
             // tb_Bill
             // 
-            this.tb_Bill.Controls.Add(this.btn_huy);
-            this.tb_Bill.Controls.Add(this.btn_xacnhann);
-            this.tb_Bill.Controls.Add(this.txB_tongtien);
-            this.tb_Bill.Controls.Add(this.txB_donvi);
-            this.tb_Bill.Controls.Add(this.txB_khachhang);
-            this.tb_Bill.Controls.Add(this.txB_soluong);
-            this.tb_Bill.Controls.Add(this.txB_madon);
-            this.tb_Bill.Controls.Add(this.txB_maban);
-            this.tb_Bill.Controls.Add(this.dGV_hienthi);
-            this.tb_Bill.Controls.Add(this.lab_donvi);
-            this.tb_Bill.Controls.Add(this.lab_tenkhach);
-            this.tb_Bill.Controls.Add(this.lab_soluong);
-            this.tb_Bill.Controls.Add(this.lab_madon);
-            this.tb_Bill.Controls.Add(this.lab_maban);
-            this.tb_Bill.Controls.Add(this.dTP_ngaythangnam);
-            this.tb_Bill.Location = new System.Drawing.Point(4, 25);
-            this.tb_Bill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_Bill.Name = "tb_Bill";
-            this.tb_Bill.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_Bill.Size = new System.Drawing.Size(766, 351);
-            this.tb_Bill.TabIndex = 0;
-            this.tb_Bill.Text = "Doanh Thu";
-            this.tb_Bill.UseVisualStyleBackColor = true;
+            tb_Bill.Controls.Add(btn_huy);
+            tb_Bill.Controls.Add(btn_xacnhann);
+            tb_Bill.Controls.Add(txB_tongtien);
+            tb_Bill.Controls.Add(txB_donvi);
+            tb_Bill.Controls.Add(txB_khachhang);
+            tb_Bill.Controls.Add(txB_soluong);
+            tb_Bill.Controls.Add(txB_madon);
+            tb_Bill.Controls.Add(txB_maban);
+            tb_Bill.Controls.Add(dGV_hienthi);
+            tb_Bill.Controls.Add(lab_donvi);
+            tb_Bill.Controls.Add(lab_tenkhach);
+            tb_Bill.Controls.Add(lab_soluong);
+            tb_Bill.Controls.Add(lab_madon);
+            tb_Bill.Controls.Add(lab_maban);
+            tb_Bill.Controls.Add(dTP_ngaythangnam);
+            tb_Bill.Location = new Point(4, 29);
+            tb_Bill.Name = "tb_Bill";
+            tb_Bill.Padding = new Padding(3, 3, 3, 3);
+            tb_Bill.Size = new Size(877, 474);
+            tb_Bill.TabIndex = 0;
+            tb_Bill.Text = "Doanh Thu";
+            tb_Bill.UseVisualStyleBackColor = true;
             // 
             // btn_huy
             // 
-            this.btn_huy.ForeColor = System.Drawing.Color.Red;
-            this.btn_huy.Location = new System.Drawing.Point(607, 99);
-            this.btn_huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(38, 22);
-            this.btn_huy.TabIndex = 19;
-            this.btn_huy.Text = "✘";
-            this.btn_huy.UseVisualStyleBackColor = true;
+            btn_huy.ForeColor = Color.Red;
+            btn_huy.Location = new Point(694, 132);
+            btn_huy.Name = "btn_huy";
+            btn_huy.Size = new Size(43, 29);
+            btn_huy.TabIndex = 19;
+            btn_huy.Text = "✘";
+            btn_huy.UseVisualStyleBackColor = true;
             // 
             // btn_xacnhann
             // 
-            this.btn_xacnhann.ForeColor = System.Drawing.Color.Green;
-            this.btn_xacnhann.Location = new System.Drawing.Point(563, 99);
-            this.btn_xacnhann.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_xacnhann.Name = "btn_xacnhann";
-            this.btn_xacnhann.Size = new System.Drawing.Size(38, 22);
-            this.btn_xacnhann.TabIndex = 18;
-            this.btn_xacnhann.Text = "✔";
-            this.btn_xacnhann.UseVisualStyleBackColor = true;
+            btn_xacnhann.ForeColor = Color.Green;
+            btn_xacnhann.Location = new Point(643, 132);
+            btn_xacnhann.Name = "btn_xacnhann";
+            btn_xacnhann.Size = new Size(43, 29);
+            btn_xacnhann.TabIndex = 18;
+            btn_xacnhann.Text = "✔";
+            btn_xacnhann.UseVisualStyleBackColor = true;
             // 
             // txB_tongtien
             // 
-            this.txB_tongtien.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txB_tongtien.Location = new System.Drawing.Point(108, 320);
-            this.txB_tongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txB_tongtien.Name = "txB_tongtien";
-            this.txB_tongtien.Size = new System.Drawing.Size(575, 23);
-            this.txB_tongtien.TabIndex = 17;
-            this.txB_tongtien.Text = "Tổng tiền:";
+            txB_tongtien.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txB_tongtien.Location = new Point(123, 427);
+            txB_tongtien.Name = "txB_tongtien";
+            txB_tongtien.Size = new Size(657, 27);
+            txB_tongtien.TabIndex = 17;
+            txB_tongtien.Text = "Tổng tiền:";
             // 
             // txB_donvi
             // 
-            this.txB_donvi.Location = new System.Drawing.Point(518, 64);
-            this.txB_donvi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txB_donvi.Name = "txB_donvi";
-            this.txB_donvi.Size = new System.Drawing.Size(165, 21);
-            this.txB_donvi.TabIndex = 15;
+            txB_donvi.Location = new Point(592, 85);
+            txB_donvi.Name = "txB_donvi";
+            txB_donvi.Size = new Size(188, 25);
+            txB_donvi.TabIndex = 15;
             // 
             // txB_khachhang
             // 
-            this.txB_khachhang.Location = new System.Drawing.Point(518, 33);
-            this.txB_khachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txB_khachhang.Name = "txB_khachhang";
-            this.txB_khachhang.Size = new System.Drawing.Size(165, 21);
-            this.txB_khachhang.TabIndex = 14;
+            txB_khachhang.Location = new Point(592, 44);
+            txB_khachhang.Name = "txB_khachhang";
+            txB_khachhang.Size = new Size(188, 25);
+            txB_khachhang.TabIndex = 14;
             // 
             // txB_soluong
             // 
-            this.txB_soluong.Location = new System.Drawing.Point(178, 96);
-            this.txB_soluong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txB_soluong.Name = "txB_soluong";
-            this.txB_soluong.Size = new System.Drawing.Size(165, 21);
-            this.txB_soluong.TabIndex = 12;
+            txB_soluong.Location = new Point(203, 128);
+            txB_soluong.Name = "txB_soluong";
+            txB_soluong.Size = new Size(188, 25);
+            txB_soluong.TabIndex = 12;
             // 
             // txB_madon
             // 
-            this.txB_madon.Location = new System.Drawing.Point(178, 64);
-            this.txB_madon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txB_madon.Name = "txB_madon";
-            this.txB_madon.Size = new System.Drawing.Size(165, 21);
-            this.txB_madon.TabIndex = 11;
+            txB_madon.Location = new Point(203, 85);
+            txB_madon.Name = "txB_madon";
+            txB_madon.Size = new Size(188, 25);
+            txB_madon.TabIndex = 11;
             // 
             // txB_maban
             // 
-            this.txB_maban.Location = new System.Drawing.Point(178, 32);
-            this.txB_maban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txB_maban.Name = "txB_maban";
-            this.txB_maban.Size = new System.Drawing.Size(165, 21);
-            this.txB_maban.TabIndex = 10;
+            txB_maban.Location = new Point(203, 43);
+            txB_maban.Name = "txB_maban";
+            txB_maban.Size = new Size(188, 25);
+            txB_maban.TabIndex = 10;
             // 
             // dGV_hienthi
             // 
-            this.dGV_hienthi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGV_hienthi.Location = new System.Drawing.Point(108, 130);
-            this.dGV_hienthi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dGV_hienthi.Name = "dGV_hienthi";
-            this.dGV_hienthi.RowHeadersWidth = 51;
-            this.dGV_hienthi.RowTemplate.Height = 29;
-            this.dGV_hienthi.Size = new System.Drawing.Size(575, 181);
-            this.dGV_hienthi.TabIndex = 16;
+            dGV_hienthi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGV_hienthi.Location = new Point(123, 173);
+            dGV_hienthi.Name = "dGV_hienthi";
+            dGV_hienthi.RowHeadersWidth = 51;
+            dGV_hienthi.RowTemplate.Height = 29;
+            dGV_hienthi.Size = new Size(657, 241);
+            dGV_hienthi.TabIndex = 16;
             // 
             // lab_donvi
             // 
-            this.lab_donvi.AutoSize = true;
-            this.lab_donvi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_donvi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lab_donvi.Location = new System.Drawing.Point(373, 66);
-            this.lab_donvi.Name = "lab_donvi";
-            this.lab_donvi.Size = new System.Drawing.Size(79, 16);
-            this.lab_donvi.TabIndex = 8;
-            this.lab_donvi.Text = "Đơn vị tiền:";
+            lab_donvi.AutoSize = true;
+            lab_donvi.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_donvi.ForeColor = Color.FromArgb(192, 64, 0);
+            lab_donvi.Location = new Point(426, 88);
+            lab_donvi.Name = "lab_donvi";
+            lab_donvi.Size = new Size(93, 19);
+            lab_donvi.TabIndex = 8;
+            lab_donvi.Text = "Đơn vị tiền:";
             // 
             // lab_tenkhach
             // 
-            this.lab_tenkhach.AutoSize = true;
-            this.lab_tenkhach.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_tenkhach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lab_tenkhach.Location = new System.Drawing.Point(373, 35);
-            this.lab_tenkhach.Name = "lab_tenkhach";
-            this.lab_tenkhach.Size = new System.Drawing.Size(114, 16);
-            this.lab_tenkhach.TabIndex = 7;
-            this.lab_tenkhach.Text = "Tên khách hàng:";
-            this.lab_tenkhach.Click += new System.EventHandler(this.lab_tenkhach_Click);
+            lab_tenkhach.AutoSize = true;
+            lab_tenkhach.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_tenkhach.ForeColor = Color.FromArgb(192, 64, 0);
+            lab_tenkhach.Location = new Point(426, 47);
+            lab_tenkhach.Name = "lab_tenkhach";
+            lab_tenkhach.Size = new Size(131, 19);
+            lab_tenkhach.TabIndex = 7;
+            lab_tenkhach.Text = "Tên khách hàng:";
+            lab_tenkhach.Click += lab_tenkhach_Click;
             // 
             // lab_soluong
             // 
-            this.lab_soluong.AutoSize = true;
-            this.lab_soluong.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_soluong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lab_soluong.Location = new System.Drawing.Point(106, 99);
-            this.lab_soluong.Name = "lab_soluong";
-            this.lab_soluong.Size = new System.Drawing.Size(69, 16);
-            this.lab_soluong.TabIndex = 5;
-            this.lab_soluong.Text = "Số lượng:";
+            lab_soluong.AutoSize = true;
+            lab_soluong.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_soluong.ForeColor = Color.FromArgb(192, 64, 0);
+            lab_soluong.Location = new Point(121, 132);
+            lab_soluong.Name = "lab_soluong";
+            lab_soluong.Size = new Size(82, 19);
+            lab_soluong.TabIndex = 5;
+            lab_soluong.Text = "Số lượng:";
             // 
             // lab_madon
             // 
-            this.lab_madon.AutoSize = true;
-            this.lab_madon.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_madon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lab_madon.Location = new System.Drawing.Point(106, 67);
-            this.lab_madon.Name = "lab_madon";
-            this.lab_madon.Size = new System.Drawing.Size(59, 16);
-            this.lab_madon.TabIndex = 4;
-            this.lab_madon.Text = "Mã đơn:";
+            lab_madon.AutoSize = true;
+            lab_madon.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_madon.ForeColor = Color.FromArgb(192, 64, 0);
+            lab_madon.Location = new Point(121, 89);
+            lab_madon.Name = "lab_madon";
+            lab_madon.Size = new Size(71, 19);
+            lab_madon.TabIndex = 4;
+            lab_madon.Text = "Mã đơn:";
             // 
             // lab_maban
             // 
-            this.lab_maban.AutoSize = true;
-            this.lab_maban.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lab_maban.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lab_maban.Location = new System.Drawing.Point(106, 34);
-            this.lab_maban.Name = "lab_maban";
-            this.lab_maban.Size = new System.Drawing.Size(58, 16);
-            this.lab_maban.TabIndex = 3;
-            this.lab_maban.Text = "Mã bàn:";
+            lab_maban.AutoSize = true;
+            lab_maban.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_maban.ForeColor = Color.FromArgb(192, 64, 0);
+            lab_maban.Location = new Point(121, 45);
+            lab_maban.Name = "lab_maban";
+            lab_maban.Size = new Size(68, 19);
+            lab_maban.TabIndex = 3;
+            lab_maban.Text = "Mã bàn:";
             // 
             // dTP_ngaythangnam
             // 
-            this.dTP_ngaythangnam.CalendarForeColor = System.Drawing.SystemColors.ControlDark;
-            this.dTP_ngaythangnam.Location = new System.Drawing.Point(274, 8);
-            this.dTP_ngaythangnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dTP_ngaythangnam.Name = "dTP_ngaythangnam";
-            this.dTP_ngaythangnam.Size = new System.Drawing.Size(219, 21);
-            this.dTP_ngaythangnam.TabIndex = 2;
+            dTP_ngaythangnam.CalendarForeColor = SystemColors.ControlDark;
+            dTP_ngaythangnam.Location = new Point(313, 11);
+            dTP_ngaythangnam.Name = "dTP_ngaythangnam";
+            dTP_ngaythangnam.Size = new Size(250, 25);
+            dTP_ngaythangnam.TabIndex = 2;
             // 
             // tbControl1
             // 
-            this.tbControl1.Controls.Add(this.tb_Bill);
-            this.tbControl1.Controls.Add(this.tb_DoiMatKhau);
-            this.tbControl1.Controls.Add(this.tb_Food);
-            this.tbControl1.Controls.Add(this.tb_FoodCategory);
-            this.tbControl1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbControl1.Location = new System.Drawing.Point(10, 2);
-            this.tbControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbControl1.Name = "tbControl1";
-            this.tbControl1.SelectedIndex = 0;
-            this.tbControl1.Size = new System.Drawing.Size(774, 380);
-            this.tbControl1.TabIndex = 0;
+            tbControl1.Controls.Add(tb_Bill);
+            tbControl1.Controls.Add(tb_DoiMatKhau);
+            tbControl1.Controls.Add(tb_Food);
+            tbControl1.Controls.Add(tb_FoodCategory);
+            tbControl1.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            tbControl1.Location = new Point(11, 3);
+            tbControl1.Name = "tbControl1";
+            tbControl1.SelectedIndex = 0;
+            tbControl1.Size = new Size(885, 507);
+            tbControl1.TabIndex = 0;
             // 
             // fCuaHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 385);
-            this.Controls.Add(this.tbControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "fCuaHang";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cửa Hàng";
-            this.tb_FoodCategory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Category)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.tb_Food.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nm_FoodPrice)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Food)).EndInit();
-            this.tb_DoiMatKhau.ResumeLayout(false);
-            this.tb_DoiMatKhau.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.tb_Bill.ResumeLayout(false);
-            this.tb_Bill.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_hienthi)).EndInit();
-            this.tbControl1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(894, 513);
+            Controls.Add(tbControl1);
+            Name = "fCuaHang";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Cửa Hàng";
+            tb_FoodCategory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtgv_Category).EndInit();
+            panel10.ResumeLayout(false);
+            panel11.ResumeLayout(false);
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            tb_Food.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nm_FoodPrice).EndInit();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtgv_Food).EndInit();
+            tb_DoiMatKhau.ResumeLayout(false);
+            tb_DoiMatKhau.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            tb_Bill.ResumeLayout(false);
+            tb_Bill.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dGV_hienthi).EndInit();
+            tbControl1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
