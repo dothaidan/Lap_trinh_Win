@@ -39,5 +39,7 @@ namespace QuanLyQuanCafe
         {
             but_manage.Enabled = false;
         }
+
+        
     }
 }

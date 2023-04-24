@@ -22,23 +22,21 @@ namespace QuanLyQuanCafe.DAO
         {
             string query = "select * from Account where Username = N'" + @username + "' and Password = N'" + @password + "'";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
-            if( result.Rows.Count > 0)
-            {
-                int type = Convert.ToInt32(result.Rows[0]["type"]);
-                if (type == 0)
-                {
-
-                    fmain f = Application.OpenForms.OfType<fmain>().FirstOrDefault();
-                    if (f != null)
-                    {
-                        f.decentralization();
-                    }
-
-                    return true;
-                }
-                else return true;
-            }
-            return false;
+            return result.Rows.Count > 0;
         }
+        public string GetType(string username, string password)
+        {
+            string query = "select type from Account where Username = N'" + @username + "' and Password = N'" + @password + "'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            if (result.Rows.Count > 0)
+            {
+                return result.Rows[0]["type"].ToString();
+            }
+            else
+            {
+                return null; 
+            }
+        }
+
     }
 }
