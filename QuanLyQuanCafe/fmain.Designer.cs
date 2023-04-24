@@ -89,6 +89,7 @@
             this.but_table.UseVisualStyleBackColor = true;
             this.but_table.Click += new System.EventHandler(this.but_table_Click);
             // 
+            // 
             // fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);

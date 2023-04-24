@@ -28,179 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
-            panel1 = new Panel();
-            panel2 = new Panel();
-            ChB_show_pass = new CheckBox();
-            TeB_username = new TextBox();
-            pictureBox3 = new PictureBox();
-            TeB_password = new TextBox();
-            pictureBox2 = new PictureBox();
-            but_login = new Button();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            but_close = new Button();
-            tltip_Close = new ToolTip(components);
-            tltip_Username = new ToolTip(components);
-            tltip_Pass = new ToolTip(components);
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ChB_show_pass = new System.Windows.Forms.CheckBox();
+            this.TeB_username = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.TeB_password = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.but_login = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.but_close = new System.Windows.Forms.Button();
+            this.tltip_Close = new System.Windows.Forms.ToolTip(this.components);
+            this.tltip_Username = new System.Windows.Forms.ToolTip(this.components);
+            this.tltip_Pass = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(but_login);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(41, 37);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(263, 380);
-            panel1.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.but_login);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(41, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(263, 380);
+            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
-            panel2.Controls.Add(ChB_show_pass);
-            panel2.Controls.Add(TeB_username);
-            panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(TeB_password);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Location = new Point(0, 181);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(253, 121);
-            panel2.TabIndex = 0;
+            this.panel2.Controls.Add(this.ChB_show_pass);
+            this.panel2.Controls.Add(this.TeB_username);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.TeB_password);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(0, 181);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(253, 121);
+            this.panel2.TabIndex = 0;
             // 
             // ChB_show_pass
             // 
-            ChB_show_pass.AutoSize = true;
-            ChB_show_pass.Location = new Point(51, 97);
-            ChB_show_pass.Name = "ChB_show_pass";
-            ChB_show_pass.Size = new Size(118, 20);
-            ChB_show_pass.TabIndex = 2;
-            ChB_show_pass.Text = "Hiện mật khẩu";
-            ChB_show_pass.UseVisualStyleBackColor = true;
-            ChB_show_pass.CheckedChanged += ChB_show_pass_CheckedChanged;
+            this.ChB_show_pass.AutoSize = true;
+            this.ChB_show_pass.Location = new System.Drawing.Point(51, 97);
+            this.ChB_show_pass.Name = "ChB_show_pass";
+            this.ChB_show_pass.Size = new System.Drawing.Size(118, 20);
+            this.ChB_show_pass.TabIndex = 2;
+            this.ChB_show_pass.Text = "Hiện mật khẩu";
+            this.ChB_show_pass.UseVisualStyleBackColor = true;
+            this.ChB_show_pass.CheckedChanged += new System.EventHandler(this.ChB_show_pass_CheckedChanged);
             // 
             // TeB_username
             // 
-            TeB_username.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            TeB_username.Location = new Point(51, 23);
-            TeB_username.Name = "TeB_username";
-            TeB_username.Size = new Size(199, 27);
-            TeB_username.TabIndex = 1;
-            TeB_username.WordWrap = false;
+            this.TeB_username.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TeB_username.Location = new System.Drawing.Point(51, 23);
+            this.TeB_username.Name = "TeB_username";
+            this.TeB_username.Size = new System.Drawing.Size(199, 27);
+            this.TeB_username.TabIndex = 1;
+            this.TeB_username.WordWrap = false;
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.keyhole;
-            pictureBox3.Location = new Point(0, 62);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(30, 30);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
+            this.pictureBox3.Image = global::QuanLyQuanCafe.Properties.Resources.keyhole;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 62);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // TeB_password
             // 
-            TeB_password.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            TeB_password.Location = new Point(51, 64);
-            TeB_password.Name = "TeB_password";
-            TeB_password.Size = new Size(199, 27);
-            TeB_password.TabIndex = 1;
-            TeB_password.UseSystemPasswordChar = true;
-            TeB_password.WordWrap = false;
+            this.TeB_password.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TeB_password.Location = new System.Drawing.Point(51, 64);
+            this.TeB_password.Name = "TeB_password";
+            this.TeB_password.Size = new System.Drawing.Size(199, 27);
+            this.TeB_password.TabIndex = 1;
+            this.TeB_password.UseSystemPasswordChar = true;
+            this.TeB_password.WordWrap = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.user;
-            pictureBox2.Location = new Point(0, 20);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 30);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Image = global::QuanLyQuanCafe.Properties.Resources.user;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // but_login
             // 
-            but_login.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
-            but_login.FlatAppearance.MouseDownBackColor = Color.LightGray;
-            but_login.FlatAppearance.MouseOverBackColor = Color.DarkGray;
-            but_login.FlatStyle = FlatStyle.Flat;
-            but_login.Location = new Point(28, 331);
-            but_login.Name = "but_login";
-            but_login.Size = new Size(206, 33);
-            but_login.TabIndex = 2;
-            but_login.Text = "Đăng nhập";
-            but_login.UseVisualStyleBackColor = true;
-            but_login.Click += but_login_Click;
+            this.but_login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.but_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.but_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_login.Location = new System.Drawing.Point(28, 331);
+            this.but_login.Name = "but_login";
+            this.but_login.Size = new System.Drawing.Size(206, 33);
+            this.but_login.TabIndex = 2;
+            this.but_login.Text = "Đăng nhập";
+            this.but_login.UseVisualStyleBackColor = true;
+            this.but_login.Click += new System.EventHandler(this.but_login_Click);
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.user1;
-            pictureBox1.Location = new Point(57, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 150);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.SteelBlue;
-            label1.Location = new Point(1, 431);
-            label1.Name = "label1";
-            label1.Size = new Size(252, 24);
-            label1.TabIndex = 2;
-            label1.Text = "Welcome to Our Project";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources.user1;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // but_close
             // 
-            but_close.FlatAppearance.BorderSize = 0;
-            but_close.FlatAppearance.MouseDownBackColor = Color.Gray;
-            but_close.FlatAppearance.MouseOverBackColor = Color.Silver;
-            but_close.FlatStyle = FlatStyle.Flat;
-            but_close.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            but_close.ForeColor = Color.Red;
-            but_close.Location = new Point(299, 0);
-            but_close.Name = "but_close";
-            but_close.Size = new Size(30, 29);
-            but_close.TabIndex = 3;
-            but_close.Text = "X";
-            but_close.UseVisualStyleBackColor = true;
-            but_close.Click += but_close_Click;
+            this.but_close.FlatAppearance.BorderSize = 0;
+            this.but_close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.but_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.but_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_close.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_close.ForeColor = System.Drawing.Color.Red;
+            this.but_close.Location = new System.Drawing.Point(299, 0);
+            this.but_close.Name = "but_close";
+            this.but_close.Size = new System.Drawing.Size(30, 29);
+            this.but_close.TabIndex = 3;
+            this.but_close.Text = "X";
+            this.but_close.UseVisualStyleBackColor = true;
+            this.but_close.Click += new System.EventHandler(this.but_close_Click);
             // 
             // fLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 16F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.MenuBar;
-            ClientSize = new Size(328, 473);
-            Controls.Add(but_close);
-            Controls.Add(label1);
-            Controls.Add(panel1);
-            Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "fLogin";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Đăng nhập";
-            Load += fLogin_Load;
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AcceptButton = this.but_login;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.CancelButton = this.but_close;
+            this.ClientSize = new System.Drawing.Size(328, 439);
+            this.Controls.Add(this.but_close);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "fLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.fLogin_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -213,7 +202,6 @@
         private PictureBox pictureBox3;
         private TextBox TeB_password;
         private Button but_login;
-        private Label label1;
         private Button but_close;
         private ToolTip tltip_Close;
         private CheckBox ChB_show_pass;
