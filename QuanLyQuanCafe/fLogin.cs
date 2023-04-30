@@ -44,8 +44,8 @@ namespace QuanLyQuanCafe
 
         private void but_login_Click(object sender, EventArgs e)
         {
-            string username = TeB_username.Text;
             string password = TeB_password.Text;
+            string username = TeB_username.Text;
             if (Login(username, password) && GetType(username, password) == "1")
             {
                 fmain f = new fmain();

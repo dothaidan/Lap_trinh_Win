@@ -92,6 +92,7 @@
             this.TeB_username.Name = "TeB_username";
             this.TeB_username.Size = new System.Drawing.Size(199, 27);
             this.TeB_username.TabIndex = 1;
+            this.TeB_username.Text = "admin";
             this.TeB_username.WordWrap = false;
             // 
             // pictureBox3
@@ -111,6 +112,7 @@
             this.TeB_password.Name = "TeB_password";
             this.TeB_password.Size = new System.Drawing.Size(199, 27);
             this.TeB_password.TabIndex = 1;
+            this.TeB_password.Text = "123456";
             this.TeB_password.UseSystemPasswordChar = true;
             this.TeB_password.WordWrap = false;
             // 

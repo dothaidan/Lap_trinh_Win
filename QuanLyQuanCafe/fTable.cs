@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyQuanCafe.DAO;
+using QuanLyQuanCafe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,126 +17,20 @@ namespace QuanLyQuanCafe
         public fTable()
         {
             InitializeComponent();
+            LoadTabble();
         }
 
-        private void but_ban1_Click(object sender, EventArgs e)
+        void LoadTabble()
         {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban2_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban3_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban4_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban5_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban6_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban7_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban8_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban9_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban10_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban11_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban12_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban13_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban14_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban15_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban16_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban17_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban18_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban19_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
-        }
-
-        private void but_ban20_Click(object sender, EventArgs e)
-        {
-            fMenu f = new fMenu();
-            f.ShowDialog();
+            List<Table> tableList = TableDAO.Instance.LoadTableList();
+            foreach (Table table in tableList)
+            {
+                Button but_ban = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
+                but_ban.Text = table.Name + "\r\n" + table.Status;
+                if(table.Status == "Trống") { but_ban.BackColor= Color.Aqua; }
+                else but_ban.BackColor = Color.HotPink;
+                flP_table.Controls.Add(but_ban);
+            }
         }
     }
 }
