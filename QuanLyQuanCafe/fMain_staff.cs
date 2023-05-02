@@ -12,6 +12,7 @@ namespace QuanLyQuanCafe
 {
     public partial class fMain_staff : Form
     {
+        private fMenu menu;
         public fMain_staff()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace QuanLyQuanCafe
 
         private void but_table_Click(object sender, EventArgs e)
         {
-            fTable f = new fTable();
+            fTable f = new fTable(menu);
             f.ShowDialog();
         }
 

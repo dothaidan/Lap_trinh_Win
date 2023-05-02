@@ -1,10 +1,11 @@
 ﻿using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyQuanCafe
 {
     public partial class fmain : Form
     {
-
+        private fMenu menu;
         public fmain()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace QuanLyQuanCafe
 
         private void but_table_Click(object sender, EventArgs e)
         {
-            fTable f = new fTable();
+            fTable f = new fTable(menu);
             f.ShowDialog();
         }
 

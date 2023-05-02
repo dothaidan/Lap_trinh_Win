@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyQuanCafe.DAO
 {
@@ -20,14 +21,14 @@ namespace QuanLyQuanCafe.DAO
         private AccountDAO() { }
         public bool Login(string username, string password)
         {
-            string query = "select * from Account where Username = N'" + @username + "' and Password = N'" + @password + "'";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            string query = "USP_Login @userName , @passWord";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password});
             return result.Rows.Count > 0;
         }
         public string GetType(string username, string password)
         {
-            string query = "select type from Account where Username = N'" + @username + "' and Password = N'" + @password + "'";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            string query = "USP_Login @userName , @passWord";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password});
             if (result.Rows.Count > 0)
             {
                 return result.Rows[0]["type"].ToString();
