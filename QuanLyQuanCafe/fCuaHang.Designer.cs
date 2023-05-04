@@ -136,7 +136,7 @@
             tb_FoodCategory.Controls.Add(panel11);
             tb_FoodCategory.Location = new Point(4, 29);
             tb_FoodCategory.Name = "tb_FoodCategory";
-            tb_FoodCategory.Padding = new Padding(3, 3, 3, 3);
+            tb_FoodCategory.Padding = new Padding(3);
             tb_FoodCategory.Size = new Size(877, 474);
             tb_FoodCategory.TabIndex = 3;
             tb_FoodCategory.Text = "Danh mục";
@@ -273,7 +273,7 @@
             tb_Food.Controls.Add(panel1);
             tb_Food.Location = new Point(4, 29);
             tb_Food.Name = "tb_Food";
-            tb_Food.Padding = new Padding(3, 3, 3, 3);
+            tb_Food.Padding = new Padding(3);
             tb_Food.Size = new Size(877, 474);
             tb_Food.TabIndex = 2;
             tb_Food.Text = "Sản Phẩm";
@@ -463,6 +463,7 @@
             txb_FoodID.ReadOnly = true;
             txb_FoodID.Size = new Size(303, 25);
             txb_FoodID.TabIndex = 3;
+            txb_FoodID.TextChanged += txb_FoodID_TextChanged;
             // 
             // label1
             // 
@@ -504,7 +505,7 @@
             tb_DoiMatKhau.Controls.Add(label5);
             tb_DoiMatKhau.Location = new Point(4, 29);
             tb_DoiMatKhau.Name = "tb_DoiMatKhau";
-            tb_DoiMatKhau.Padding = new Padding(3, 3, 3, 3);
+            tb_DoiMatKhau.Padding = new Padding(3);
             tb_DoiMatKhau.Size = new Size(877, 474);
             tb_DoiMatKhau.TabIndex = 1;
             tb_DoiMatKhau.Text = "Đổi mật khẩu";
@@ -684,7 +685,7 @@
             tb_Bill.Controls.Add(dTP_ngaythangnam);
             tb_Bill.Location = new Point(4, 29);
             tb_Bill.Name = "tb_Bill";
-            tb_Bill.Padding = new Padding(3, 3, 3, 3);
+            tb_Bill.Padding = new Padding(3);
             tb_Bill.Size = new Size(877, 474);
             tb_Bill.TabIndex = 0;
             tb_Bill.Text = "Doanh Thu";
