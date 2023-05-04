@@ -1,4 +1,4 @@
-﻿create database QuanLyQuanCafe
+create database QuanLyQuanCafe
 go
 
 use QuanLyQuanCafe
@@ -61,7 +61,7 @@ create table BillInfo
 go
 
 
--- them category 
+-- thêm category 
 insert into FoodCategory(name)
 values (N'Cafe')
 insert into FoodCategory(name)
@@ -73,13 +73,8 @@ values (N'Nước ép')
 insert FoodCategory(name)
 values (N'Đồ ăn vặt')
 
-select * from dbo.FoodCategory
 
-
-delete from FoodCategory 
-DBCC CHECKIDENT('FoodCategory', RESEED, 0)
-
--- them mon an
+-- thêm món
 insert dbo.Food(name, idCategory, price)
 values (N'Cafe đen đá', 1, 20000)
 insert dbo.Food(name, idCategory, price)
@@ -121,12 +116,8 @@ values (N'Khô bò', 5, 20000)
 insert dbo.Food(name, idCategory, price)
 values (N'Khô gà', 5, 20000)
 
-select * from dbo.Food
 
-delete from Food 
-DBCC CHECKIDENT('Food', RESEED, 0)
-
---them bill
+-- thêm bill
 insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
 values		(GETDATE(), NULL, 1, 0) 
 insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
@@ -134,9 +125,8 @@ values		(GETDATE(), NULL, 2, 0)
 insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
 values		(GETDATE(), GETDATE(), 2, 1)  
 
-select * from Bill
 
---them bill info
+-- thêm bill info
 insert BillInfo (idBill, idFood, count) 
 values			(1, 3, 4)
 insert BillInfo (idBill, idFood, count) 
@@ -150,8 +140,7 @@ values			(1, 6, 2)
 insert BillInfo (idBill, idFood, count) 
 values			(3, 5, 2)
 
-select * from BillInfo
---them account
+-- thêm account
 insert into Account (
 	Username,
 	Password,
@@ -166,21 +155,7 @@ insert into Account (
 ) Values (
 	N'staff', N'123456', 0
 )
-
-create proc USP_GetAccountByUserName
-@userName Nvarchar(100)
-as 
-begin
-	select * from Account where username = @userName
-end
-go
-
-exec USP_GetAccountByUserName @userName = N'admin'
-
-select * from Account where Username = N'admin' and Password = N'" + @password + "' and type = 1
-select * from Account where Username = N'" + username + "'
-
---them danh sach ban
+-- thêm bàn
 declare @i int = 1
 while @i <= 20
 begin
@@ -188,17 +163,66 @@ begin
 	set @i = @i + 1
 end
 
-update TableFood set status = N'Có người' where id = 2
+-- tạo store procedure cho Account
+
+create proc USP_Login	
+@userName Nvarchar(100), @passWord Nvarchar(1000)
+as 
+begin
+	select * from Account where username = @userName and password = @passWord
+end
+go
+
+create proc USP_UpdateAccount --dùng cho thay đổi mật khẩu
+@UserName Nvarchar(100), @Password Nvarchar(1000), @NewPassword Nvarchar(1000)
+as
+begin
+	declare @isRightPass int = 0
+	select @isRightPass = count(*) from Account where UserName = @UserName and Password = @Password
+	if (@isRightPass = 1)
+	begin
+		if (@NewPassword = null or @NewPassword = '')
+			update Account set DisplayName = @DisplayName where UserName = @UserName
+		else
+			update Account set DisplayName = @DisplayName, Password = @NewPassword where UserName = @UserName
+	end
+end
+go
+
+--end store procedure cho Account
+
+-- tạo store procedure cho table
 
 create proc USP_GetTableList
 as select * from TableFood
 go
 
-execute USP_GetTableList
-select * from TableFood
-DBCC CHECKIDENT('TableFood', RESEED, 0) --Lệnh reset giá trị ID về 0
+-- end store procedure cho table
 
---them 
-select * from Bill
-go 
-select * from BillInfo
+--tạo store procedure cho Bill
+
+create proc USP_GetUnCheckBillIDByTableID
+	@idTable int
+as
+	select * from Bill where idTable = @idTable AND Status = 0
+go
+
+
+create proc USP_GetBillInfo
+    @idBill int
+as
+begin
+    select * from BillInfo where idBill = @idBill
+end
+go
+
+create proc USP_GetBillInfoByIDTable
+	@idTable Int
+as
+begin
+	select f.name, bi.count, f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b, Food as f 
+	where bi.idBill = b.id and bi.idFood = f.id and b.status = 0 and b.idTable = @idTable
+end
+go
+
+--end store procedure cho Bill 
