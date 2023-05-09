@@ -10,13 +10,14 @@ namespace QuanLyQuanCafe
             InitializeComponent();
 
         }
-        
+        #region method
         bool Login(string username, string password)
         {
             return AccountDAO.Instance.Login(username, password);
         }
 
-        string GetType(string type, string password) { 
+        string GetType(string type, string password)
+        {
             return AccountDAO.Instance.GetType(type, password);
         }
 
@@ -26,6 +27,9 @@ namespace QuanLyQuanCafe
             TeB_password.Clear();
         }
 
+        #endregion
+
+        #region events
         private void fLogin_Load(object sender, EventArgs e)
         {
             tltip_Close.SetToolTip(but_close, "Close");
@@ -53,7 +57,7 @@ namespace QuanLyQuanCafe
                 f.ShowDialog();
                 this.Show();
             }
-            else if(Login(username, password) && GetType(username, password) == "0")
+            else if (Login(username, password) && GetType(username, password) == "0")
             {
                 fMain_staff f = new fMain_staff();
                 this.Hide();
@@ -61,13 +65,16 @@ namespace QuanLyQuanCafe
                 this.Show();
             }
             else MessageBox.Show("Sai tài khoản hoặc mật khẩu nè!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            TeB_password.Clear();
-            TeB_username.Clear();
+            ClearTeb();
         }
 
         private void but_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        #endregion
+
+
     }
 }

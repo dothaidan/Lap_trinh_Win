@@ -20,14 +20,13 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
         }
+        #region method
         public fMenu(List<Menu> ListMenu)
         {
             InitializeComponent();
             this.ListMenu = ListMenu;
             UpdateListView(ListMenu);
         }
-        
-
         public void UpdateListView(List<Menu> ListMenu)
         {
             lsvBill.Items.Clear();
@@ -49,6 +48,6 @@ namespace QuanLyQuanCafe
             }
             else but_Thanhtoan.Text = "Thanh toán";
         }
-
+        #endregion
     }
 }

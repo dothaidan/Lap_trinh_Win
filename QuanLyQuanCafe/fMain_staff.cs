@@ -18,16 +18,18 @@ namespace QuanLyQuanCafe
             InitializeComponent();
         }
 
+        #region events
         private void but_table_Click(object sender, EventArgs e)
         {
             fTable f = new fTable(menu);
+            this.Hide();
             f.ShowDialog();
+            this.Show();
         }
 
         private void PiB_logOut_Click(object sender, EventArgs e)
         {
             fLogin f = new fLogin();
-            f.ClearTeb();
             this.Close();
         }
 
@@ -35,5 +37,7 @@ namespace QuanLyQuanCafe
         {
             tltip_LogOut.SetToolTip(PiB_logOut, "Log Out");
         }
+
+        #endregion 
     }
 }

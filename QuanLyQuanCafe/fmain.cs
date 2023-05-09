@@ -10,19 +10,19 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
         }
-
+        #region events
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             fLogin f = new fLogin();
-            f.ClearTeb();
             this.Close();
-
         }
 
         private void but_table_Click(object sender, EventArgs e)
         {
             fTable f = new fTable(menu);
+            this.Hide();
             f.ShowDialog();
+            this.Show();
         }
 
         private void but_manage_Click(object sender, EventArgs e)
@@ -36,11 +36,6 @@ namespace QuanLyQuanCafe
             tltip_logOut.SetToolTip(PiB_logOut, "Log Out");
         }
 
-        public void decentralization()
-        {
-            but_manage.Enabled = false;
-        }
-
-        
+        #endregion
     }
 }
