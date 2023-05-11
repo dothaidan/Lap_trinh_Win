@@ -119,13 +119,13 @@ values (N'Khô gà', 5, 20000)
 
 -- thêm bill
 insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
-values		(GETDATE(), NULL, 1, 0) 
+values		(GETDATE(), NULL, 5, 0) 
 insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
-values		(GETDATE(), NULL, 2, 0)
+values		(GETDATE(), NULL, 6, 0)
 insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
-values		(GETDATE(), GETDATE(), 2, 1)  
+values		(GETDATE(), GETDATE(), 7, 1)  
 
-
+select * from dbo.TableFood
 -- thêm bill info
 insert BillInfo (idBill, idFood, count) 
 values			(1, 3, 4)
@@ -139,6 +139,17 @@ insert BillInfo (idBill, idFood, count)
 values			(1, 6, 2)
 insert BillInfo (idBill, idFood, count) 
 values			(3, 5, 2)
+
+-- thêm tablefood
+declare @i int = 0 
+while @i <= 20
+begin 
+	insert dbo.TableFood (name) values (N'Bàn ' + cast(@i as nvarchar(100)))
+	set @i = @i + 1
+end
+update dbo.TableFood set status = N'Có người' where id = 6
+update dbo.TableFood set status = N'Có người' where id = 9
+select * from dbo.TableFood
 
 -- thêm account
 insert into Account (
@@ -226,3 +237,9 @@ end
 go
 
 --end store procedure cho Bill 
+alter table Bill drop constraint idTable
+DBCC CHECKIDENT('Bill', RESEED, 0)
+select * from dbo.Bill
+select * from dbo.BillInfo
+select * from dbo.Food
+select * from dbo.FoodCategory

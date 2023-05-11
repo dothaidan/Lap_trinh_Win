@@ -18,11 +18,11 @@ namespace QuanLyQuanCafe
         public fTable(fMenu menu)
         {
             InitializeComponent();
-            LoadTabble();
+            LoadTable();
             this.menu = menu;
         }
 
-        void LoadTabble()
+        void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
             foreach (Table table in tableList)
@@ -30,9 +30,9 @@ namespace QuanLyQuanCafe
                 Button but_ban = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
                 but_ban.Text = table.Name + "\r\n" + table.Status;
                 but_ban.Click += But_table_Click;
-                but_ban.Tag= table;
+                but_ban.Tag = table;
                 if (table.Status == "Trống") { but_ban.BackColor = Color.Aqua; }
-                else but_ban.BackColor = Color.HotPink;
+                if (table.Status == "Có người") { but_ban.BackColor = Color.HotPink; }
                 flP_table.Controls.Add(but_ban);
             }
         }
@@ -40,7 +40,7 @@ namespace QuanLyQuanCafe
         {
             List<Menu> ListMenu = MenuDAO.Instance.GetListMenuByTable(id);
 
-            if (menu == null )
+            if (menu == null)
             {
                 return;
             }
@@ -61,6 +61,11 @@ namespace QuanLyQuanCafe
                 menu.UpdateListView(MenuDAO.Instance.GetListMenuByTable(tableID));
                 menu.ShowDialog();
             }
+        }
+
+        private void flP_table_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

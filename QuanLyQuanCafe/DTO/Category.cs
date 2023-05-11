@@ -11,25 +11,30 @@ namespace QuanLyQuanCafe.DTO
     {
         public Category(int id, string name)
         {
-            this.iD = id;
-            this.name = name;
+            this.ID = id;
+            this.Name = name;
         }
+
         public Category(DataRow row)
         {
-            this.iD = (int)row["ID"];
-            this.name = row["name"].ToString();
+            this.ID = (int)row["id"];
+            this.Name = row["name"].ToString();
         }
+
         private string name;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
         private int iD;
-public int ID
+
+        public int ID
         {
             get { return iD; }
             set { iD = value; }
         }
-        public string Name 
-        { 
-            get { return name; }
-            set { name = value; } 
-        } 
     }
 }

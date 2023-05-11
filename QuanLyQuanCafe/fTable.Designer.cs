@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flP_table = new System.Windows.Forms.FlowLayoutPanel();
-            this.SuspendLayout();
+            flP_table = new FlowLayoutPanel();
+            SuspendLayout();
             // 
             // flP_table
             // 
-            this.flP_table.AutoScroll = true;
-            this.flP_table.Location = new System.Drawing.Point(1, -1);
-            this.flP_table.Name = "flP_table";
-            this.flP_table.Size = new System.Drawing.Size(692, 392);
-            this.flP_table.TabIndex = 0;
+            flP_table.AutoScroll = true;
+            flP_table.Location = new Point(1, -1);
+            flP_table.Name = "flP_table";
+            flP_table.Size = new Size(692, 392);
+            flP_table.TabIndex = 0;
+            flP_table.Paint += flP_table_Paint;
             // 
             // fTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 389);
-            this.Controls.Add(this.flP_table);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "fTable";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bàn";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(693, 389);
+            Controls.Add(flP_table);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "fTable";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bàn";
+            ResumeLayout(false);
         }
 
         #endregion
