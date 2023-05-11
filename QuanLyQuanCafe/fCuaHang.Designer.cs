@@ -303,6 +303,7 @@
             but_SearchFood.TabIndex = 1;
             but_SearchFood.Text = "Tìm";
             but_SearchFood.UseVisualStyleBackColor = true;
+            but_SearchFood.Click += but_SearchFood_Click;
             // 
             // panel3
             // 
@@ -335,6 +336,7 @@
             but_EditFood.TabIndex = 2;
             but_EditFood.Text = "Sửa";
             but_EditFood.UseVisualStyleBackColor = true;
+            but_EditFood.Click += but_EditFood_Click;
             // 
             // but_DeleteFood
             // 
@@ -345,6 +347,7 @@
             but_DeleteFood.TabIndex = 1;
             but_DeleteFood.Text = "Xóa";
             but_DeleteFood.UseVisualStyleBackColor = true;
+            but_DeleteFood.Click += but_DeleteFood_Click;
             // 
             // but_AddFood
             // 
@@ -355,6 +358,7 @@
             but_AddFood.TabIndex = 0;
             but_AddFood.Text = "Thêm";
             but_AddFood.UseVisualStyleBackColor = true;
+            but_AddFood.Click += but_AddFood_Click;
             // 
             // panel2
             // 
