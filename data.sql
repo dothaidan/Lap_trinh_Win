@@ -6,10 +6,11 @@ go
 
 create table Account(
 	Username Nvarchar(100) primary key,
+	DisplayName Nvarchar(100) not null,
 	Password Nvarchar(1000) not null,
 	Type int not null default 0 --0: staff, 1: admin
 )
-
+drop table Account
 CREATE TABLE TableFood
 (
 	id int identity primary key,
@@ -154,17 +155,19 @@ select * from dbo.TableFood
 -- thêm account
 insert into Account (
 	Username,
+	DisplayName,
 	Password,
 	Type
 ) Values (
-	N'admin', N'123456', 1
+	N'admin',N'ADMIN', N'123456', 1
 )
 insert into Account (
 	Username,
+	DisplayName,
 	Password,
 	Type
 ) Values (
-	N'staff', N'123456', 0
+	N'staff',N'STAFF', N'123456', 0
 )
 -- thêm bàn
 declare @i int = 1
@@ -184,21 +187,28 @@ begin
 end
 go
 
-create proc USP_UpdateAccount --dùng cho thay đổi mật khẩu
-@UserName Nvarchar(100), @Password Nvarchar(1000), @NewPassword Nvarchar(1000)
-as
-begin
-	declare @isRightPass int = 0
-	select @isRightPass = count(*) from Account where UserName = @UserName and Password = @Password
-	if (@isRightPass = 1)
-	begin
-		if (@NewPassword = null or @NewPassword = '')
-			update Account set DisplayName = @DisplayName where UserName = @UserName
-		else
-			update Account set DisplayName = @DisplayName, Password = @NewPassword where UserName = @UserName
+CREATE PROC USP_UpdateAccount --dùng cho thay đổi mật khẩu
+@userName NVARCHAR(100), @displayName NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
+AS
+BEGIN
+	DECLARE @isRightPass INT = 0
+	
+	SELECT @isRightPass = COUNT(*) FROM Account WHERE UserName = @userName AND PassWord = @password
+	
+	IF (@isRightPass = 1)
+	BEGIN
+		IF (@newPassword = NULL OR @newPassword = '')
+		BEGIN
+			UPDATE Account SET DisplayName = @displayName WHERE UserName = @userName
+		END		
+		ELSE
+			UPDATE Account SET DisplayName = @displayName, PassWord = @newPassword WHERE UserName = @userName
 	end
-end
-go
+END
+GO
+
+
+
 
 --end store procedure cho Account
 
@@ -265,4 +275,6 @@ END
 GO
 
 CREATE FUNCTION [dbo].[fuConvertToUnsign1] ( @strInput NVARCHAR(4000) ) RETURNS NVARCHAR(4000) AS BEGIN IF @strInput IS NULL RETURN @strInput IF @strInput = '' RETURN @strInput DECLARE @RT NVARCHAR(4000) DECLARE @SIGN_CHARS NCHAR(136) DECLARE @UNSIGN_CHARS NCHAR (136) SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' DECLARE @COUNTER int DECLARE @COUNTER1 int SET @COUNTER = 1 WHILE (@COUNTER <=LEN(@strInput)) BEGIN SET @COUNTER1 = 1 WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) BREAK END SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END SET @strInput = replace(@strInput,' ','-') RETURN @strInput END
+
+
 
