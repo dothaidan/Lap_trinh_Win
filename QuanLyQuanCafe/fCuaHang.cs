@@ -48,11 +48,11 @@ namespace QuanLyQuanCafe
             cb.DataSource = CategoryDAO.Instance.GetListCategory();
             cb.DisplayMember = "Name";
         }
-         
+
         List<Food> SearchFoodByName(string name)
         {
             List<Food> listFood = foodDAO.Instance.SearchFoodByName(name);
-            
+
             return listFood;
         }
 
@@ -75,10 +75,66 @@ namespace QuanLyQuanCafe
         {
 
         }
+        private Account loginAccount;
 
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount); }
+        }
+        public fCuaHang(Account acc)
+        {
+            InitializeComponent();
+
+            LoginAccount = acc;
+        }
+
+        void ChangeAccount(Account acc)
+        {
+            teB_tennguoidung.Text = LoginAccount.UserName;
+            teB_tenhienthi.Text = LoginAccount.DisplayName;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        void UpdateAccountInfo()//
+        {
+            string displayName = teB_tenhienthi.Text;
+            string password = teB_matkhaucu.Text;
+            string newpass = teB_matkhaumoi.Text;
+            string reenterPass = teB_nhaplaimatkhau.Text;
+            string userName = teB_tenhienthi.Text;
+
+            if (!newpass.Equals(reenterPass))
+            {
+                MessageBox.Show("Vui lòng nhập lại mật khẩu đúng với mật khẩu mới!");
+            }
+            else
+            {
+                if (AccountDAO.Instance.UpdateAccount(userName, displayName, password, newpass))
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng điền đúng mật khấu");
+                }
+            }
+        }
         private void btn_xacnhan_Click(object sender, EventArgs e)
         {
-
+            UpdateAccountInfo();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -186,7 +242,7 @@ namespace QuanLyQuanCafe
             }
         }
 
-      
+
 
         private event EventHandler insertFood;
         public event EventHandler InsertFood
@@ -211,8 +267,23 @@ namespace QuanLyQuanCafe
 
         private void but_SearchFood_Click(object sender, EventArgs e)
         {
-         foodList.DataSource =   SearchFoodByName(txb_SearchFoodName.Text);
+            foodList.DataSource = SearchFoodByName(txb_SearchFoodName.Text);
         }
-        #endregion   
+        #endregion
+
+        private void btn_huybo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_huybo_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

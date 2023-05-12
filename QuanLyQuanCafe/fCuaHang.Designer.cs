@@ -76,8 +76,8 @@
             teB_matkhaumoi = new TextBox();
             lab_matkhaumoi = new Label();
             panel16 = new Panel();
-            label6 = new Label();
-            Teb_username = new TextBox();
+            lab_tennguoidung = new Label();
+            teB_tennguoidung = new TextBox();
             panel9 = new Panel();
             lab_matkhaucu = new Label();
             teB_matkhaucu = new TextBox();
@@ -101,6 +101,9 @@
             lab_maban = new Label();
             dTP_ngaythangnam = new DateTimePicker();
             tbControl1 = new TabControl();
+            panel17 = new Panel();
+            lab_tenhienthi = new Label();
+            teB_tenhienthi = new TextBox();
             tb_FoodCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_Category).BeginInit();
             panel10.SuspendLayout();
@@ -127,6 +130,7 @@
             tb_Bill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dGV_hienthi).BeginInit();
             tbControl1.SuspendLayout();
+            panel17.SuspendLayout();
             SuspendLayout();
             // 
             // tb_FoodCategory
@@ -499,6 +503,7 @@
             // 
             // tb_DoiMatKhau
             // 
+            tb_DoiMatKhau.Controls.Add(panel17);
             tb_DoiMatKhau.Controls.Add(pictureBox1);
             tb_DoiMatKhau.Controls.Add(panel13);
             tb_DoiMatKhau.Controls.Add(panel12);
@@ -529,9 +534,9 @@
             // 
             panel13.Controls.Add(teB_nhaplaimatkhau);
             panel13.Controls.Add(lab_nhaplaimatkhau);
-            panel13.Location = new Point(29, 325);
+            panel13.Location = new Point(29, 356);
             panel13.Name = "panel13";
-            panel13.Size = new Size(370, 81);
+            panel13.Size = new Size(370, 69);
             panel13.TabIndex = 9;
             // 
             // teB_nhaplaimatkhau
@@ -556,9 +561,9 @@
             // 
             panel12.Controls.Add(teB_matkhaumoi);
             panel12.Controls.Add(lab_matkhaumoi);
-            panel12.Location = new Point(29, 240);
+            panel12.Location = new Point(29, 284);
             panel12.Name = "panel12";
-            panel12.Size = new Size(370, 79);
+            panel12.Size = new Size(370, 66);
             panel12.TabIndex = 8;
             // 
             // teB_matkhaumoi
@@ -582,39 +587,39 @@
             // 
             // panel16
             // 
-            panel16.Controls.Add(label6);
-            panel16.Controls.Add(Teb_username);
-            panel16.Location = new Point(29, 51);
+            panel16.Controls.Add(lab_tennguoidung);
+            panel16.Controls.Add(teB_tennguoidung);
+            panel16.Location = new Point(29, 39);
             panel16.Name = "panel16";
-            panel16.Size = new Size(370, 89);
+            panel16.Size = new Size(370, 77);
             panel16.TabIndex = 7;
             // 
-            // label6
+            // lab_tennguoidung
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(5, 19);
-            label6.Name = "label6";
-            label6.Size = new Size(131, 19);
-            label6.TabIndex = 2;
-            label6.Text = "Tên người dùng:";
-            label6.Click += label6_Click;
+            lab_tennguoidung.AutoSize = true;
+            lab_tennguoidung.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_tennguoidung.Location = new Point(5, 19);
+            lab_tennguoidung.Name = "lab_tennguoidung";
+            lab_tennguoidung.Size = new Size(131, 19);
+            lab_tennguoidung.TabIndex = 2;
+            lab_tennguoidung.Text = "Tên người dùng:";
+            lab_tennguoidung.Click += label6_Click;
             // 
-            // Teb_username
+            // teB_tennguoidung
             // 
-            Teb_username.Location = new Point(5, 41);
-            Teb_username.Multiline = true;
-            Teb_username.Name = "Teb_username";
-            Teb_username.Size = new Size(305, 32);
-            Teb_username.TabIndex = 0;
+            teB_tennguoidung.Location = new Point(5, 41);
+            teB_tennguoidung.Multiline = true;
+            teB_tennguoidung.Name = "teB_tennguoidung";
+            teB_tennguoidung.Size = new Size(305, 32);
+            teB_tennguoidung.TabIndex = 0;
             // 
             // panel9
             // 
             panel9.Controls.Add(lab_matkhaucu);
             panel9.Controls.Add(teB_matkhaucu);
-            panel9.Location = new Point(29, 145);
+            panel9.Location = new Point(29, 203);
             panel9.Name = "panel9";
-            panel9.Size = new Size(370, 89);
+            panel9.Size = new Size(370, 75);
             panel9.TabIndex = 7;
             // 
             // lab_matkhaucu
@@ -639,19 +644,20 @@
             // btn_huybo
             // 
             btn_huybo.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_huybo.Location = new Point(246, 420);
+            btn_huybo.Location = new Point(246, 431);
             btn_huybo.Name = "btn_huybo";
-            btn_huybo.Size = new Size(94, 43);
+            btn_huybo.Size = new Size(94, 32);
             btn_huybo.TabIndex = 6;
             btn_huybo.Text = "Hủy bỏ";
             btn_huybo.UseVisualStyleBackColor = true;
+            btn_huybo.Click += btn_huybo_Click_1;
             // 
             // btn_xacnhan
             // 
             btn_xacnhan.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_xacnhan.Location = new Point(109, 420);
+            btn_xacnhan.Location = new Point(109, 431);
             btn_xacnhan.Name = "btn_xacnhan";
-            btn_xacnhan.Size = new Size(94, 43);
+            btn_xacnhan.Size = new Size(94, 32);
             btn_xacnhan.TabIndex = 5;
             btn_xacnhan.Text = "Xác nhận";
             btn_xacnhan.UseVisualStyleBackColor = true;
@@ -663,7 +669,7 @@
             label5.Font = new Font("Arial Narrow", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.Red;
             label5.ImageAlign = ContentAlignment.TopCenter;
-            label5.Location = new Point(341, 12);
+            label5.Location = new Point(343, 3);
             label5.Name = "label5";
             label5.Size = new Size(210, 33);
             label5.TabIndex = 1;
@@ -846,6 +852,34 @@
             tbControl1.Size = new Size(885, 507);
             tbControl1.TabIndex = 0;
             // 
+            // panel17
+            // 
+            panel17.Controls.Add(lab_tenhienthi);
+            panel17.Controls.Add(teB_tenhienthi);
+            panel17.Location = new Point(29, 122);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(370, 75);
+            panel17.TabIndex = 11;
+            // 
+            // lab_tenhienthi
+            // 
+            lab_tenhienthi.AutoSize = true;
+            lab_tenhienthi.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lab_tenhienthi.Location = new Point(5, 19);
+            lab_tenhienthi.Name = "lab_tenhienthi";
+            lab_tenhienthi.Size = new Size(99, 19);
+            lab_tenhienthi.TabIndex = 2;
+            lab_tenhienthi.Text = "Tên hiển thị:";
+            lab_tenhienthi.Click += label9_Click;
+            // 
+            // teB_tenhienthi
+            // 
+            teB_tenhienthi.Location = new Point(5, 41);
+            teB_tenhienthi.Multiline = true;
+            teB_tenhienthi.Name = "teB_tenhienthi";
+            teB_tenhienthi.Size = new Size(305, 32);
+            teB_tenhienthi.TabIndex = 0;
+            // 
             // fCuaHang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -894,6 +928,8 @@
             tb_Bill.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dGV_hienthi).EndInit();
             tbControl1.ResumeLayout(false);
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -946,8 +982,8 @@
         private TextBox teB_matkhaumoi;
         private Label lab_matkhaumoi;
         private Panel panel16;
-        private Label label6;
-        private TextBox Teb_username;
+        private Label lab_tennguoidung;
+        private TextBox teB_tennguoidung;
         private Panel panel9;
         private Label lab_matkhaucu;
         private TextBox teB_matkhaucu;
@@ -971,5 +1007,8 @@
         private Label lab_maban;
         private DateTimePicker dTP_ngaythangnam;
         private TabControl tbControl1;
+        private Panel panel17;
+        private Label lab_tenhienthi;
+        private TextBox teB_tenhienthi;
     }
 }
