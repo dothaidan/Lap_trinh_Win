@@ -4,7 +4,8 @@ go
 use QuanLyQuanCafe
 go
 
-create table Account(
+create table Account
+(
 	Username Nvarchar(100) primary key,
 	DisplayName Nvarchar(100) not null,
 	Password Nvarchar(1000) not null,
@@ -117,30 +118,6 @@ values (N'Khô bò', 5, 20000)
 insert dbo.Food(name, idCategory, price)
 values (N'Khô gà', 5, 20000)
 
-
--- thêm bill
-insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
-values		(GETDATE(), NULL, 5, 0) 
-insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
-values		(GETDATE(), NULL, 6, 0)
-insert Bill (DateCheckIn, DateCheckOut, idTable, status) 
-values		(GETDATE(), GETDATE(), 7, 1)  
-
-select * from dbo.TableFood
--- thêm bill info
-insert BillInfo (idBill, idFood, count) 
-values			(1, 3, 4)
-insert BillInfo (idBill, idFood, count) 
-values			(1, 5, 1)
-insert BillInfo (idBill, idFood, count) 
-values			(2, 1, 2)
-insert BillInfo (idBill, idFood, count) 
-values			(1, 1, 2)
-insert BillInfo (idBill, idFood, count) 
-values			(1, 6, 2)
-insert BillInfo (idBill, idFood, count) 
-values			(3, 5, 2)
-
 -- thêm tablefood
 declare @i int = 0 
 while @i <= 20
@@ -148,9 +125,6 @@ begin
 	insert dbo.TableFood (name) values (N'Bàn ' + cast(@i as nvarchar(100)))
 	set @i = @i + 1
 end
-update dbo.TableFood set status = N'Có người' where id = 6
-update dbo.TableFood set status = N'Có người' where id = 9
-select * from dbo.TableFood
 
 -- thêm account
 insert into Account (
@@ -169,13 +143,6 @@ insert into Account (
 ) Values (
 	N'staff',N'STAFF', N'123456', 0
 )
--- thêm bàn
-declare @i int = 1
-while @i <= 20
-begin
-	insert TableFood (name) values (N'Bàn ' + CAST(@i as nvarchar(100)))
-	set @i = @i + 1
-end
 
 -- tạo store procedure cho Account
 
@@ -206,10 +173,6 @@ BEGIN
 	end
 END
 GO
-
-
-
-
 --end store procedure cho Account
 
 -- tạo store procedure cho table
@@ -246,16 +209,17 @@ begin
 end
 go
 
---end store procedure cho Bill 
-alter table Bill drop constraint idTable
-DBCC CHECKIDENT('Bill', RESEED, 0)
-select * from dbo.Bill
-select * from dbo.BillInfo
-select * from dbo.Food
-select * from dbo.FoodCategory
-select * from Account
-delete from Food where id = 21
+create proc USP_GetListBillByDate
+@checkIn date, @checkOut date
+as 
+begin
+	SELECT t.name as [Tên bàn], DateCheckIn as [Ngày vào], DateCheckOut as [Ngày ra], discount as [Giảm giá], totalPrice as [Tổng tiền]
+	FROM Bill AS b, TableFood AS t
+	WHERE DateCheckIn >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1 AND t.id = b.idTable
+end 
+go
 
+--end store procedure cho Bill 
 
 CREATE TRIGGER UTG_DeleteBillInfo
 ON dbo.BillInfo FOR DELETE
@@ -307,6 +271,3 @@ BEGIN
 				SET @strInput = replace(@strInput,' ','-') 
 	RETURN @strInput 
 END
-
-
-

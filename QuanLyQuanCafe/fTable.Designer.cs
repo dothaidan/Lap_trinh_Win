@@ -38,7 +38,6 @@
             flP_table.Name = "flP_table";
             flP_table.Size = new Size(692, 392);
             flP_table.TabIndex = 0;
-            flP_table.Paint += flP_table_Paint;
             // 
             // fTable
             // 

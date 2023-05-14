@@ -21,7 +21,7 @@ namespace QuanLyQuanCafe
             LoadTable();
             this.menu = menu;
         }
-
+        #region method
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -47,6 +47,8 @@ namespace QuanLyQuanCafe
 
             menu.UpdateListView(ListMenu);
         }
+        #endregion
+        #region events
         void But_table_Click(object sender, EventArgs e)
         {
             int tableID = ((sender as Button).Tag as Table).ID;
@@ -63,9 +65,7 @@ namespace QuanLyQuanCafe
             }
         }
 
-        private void flP_table_Paint(object sender, PaintEventArgs e)
-        {
+        #endregion
 
-        }
     }
 }

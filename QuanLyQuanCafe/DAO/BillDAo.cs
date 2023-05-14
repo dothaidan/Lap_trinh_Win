@@ -31,7 +31,7 @@ namespace QuanLyQuanCafe.DAO
         }
         public void InsertBill(int id)
         {
-            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBill @idTable", new object[] { id });
         }
 
         public int GetMaxIDBill()
@@ -44,6 +44,10 @@ namespace QuanLyQuanCafe.DAO
             {
                 return 1;
             }
+        }
+        public DataTable GetListBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
         }
     }
 }

@@ -22,7 +22,7 @@ namespace QuanLyQuanCafe.DAO
         public List<Food> GetFoodByCategoryID(int id)
         {
             List<Food> list = new List<Food>();
-            string query = "select * from Food where idCategory = " + id;
+            string query = "SELECT * FROM dbo.Food WHERE idCategory = " + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
@@ -65,9 +65,9 @@ namespace QuanLyQuanCafe.DAO
             return result > 0;
         }
 
-        public bool UpdateFood(int idFood, string name, int id, float price)
+        public bool UpdateFood(string name, int idcategory, float price, int id)
         {
-            string query = string.Format("UPDATE dbo.Food SET name = N'{0}', idCategory = {1}, price = {2} WHERE id = {3}", name, id, price, idFood);
+            string query = string.Format("UPDATE dbo.Food SET name = N'{0}', idCategory = {1}, price = {2} WHERE id = {3}", name, id, price, idcategory);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

@@ -40,10 +40,11 @@ namespace QuanLyQuanCafe.DAO
         }
         public bool UpdateAccount(string userName, string displayName, string pass, string newPass)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[] { userName, displayName, pass, newPass });
+            string query = "USP_UpdateAccount @userName , @displayName , @password , @newPassword";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { userName, displayName, pass, newPass });
 
             return result > 0;
-        }//
+        }
 
     }
 }

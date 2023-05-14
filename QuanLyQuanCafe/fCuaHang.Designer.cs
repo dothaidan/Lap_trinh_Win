@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCuaHang));
             this.tb_FoodCategory = new System.Windows.Forms.TabPage();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.TeB_SearchCategory = new System.Windows.Forms.TextBox();
+            this.btn_SearchCategory = new System.Windows.Forms.Button();
             this.dtgv_Category = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.but_ShowCategory = new System.Windows.Forms.Button();
@@ -94,6 +97,7 @@
             this.dtp_FromDate = new System.Windows.Forms.DateTimePicker();
             this.tbControl1 = new System.Windows.Forms.TabControl();
             this.tb_FoodCategory.SuspendLayout();
+            this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Category)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -124,6 +128,7 @@
             // 
             // tb_FoodCategory
             // 
+            this.tb_FoodCategory.Controls.Add(this.panel18);
             this.tb_FoodCategory.Controls.Add(this.dtgv_Category);
             this.tb_FoodCategory.Controls.Add(this.panel10);
             this.tb_FoodCategory.Controls.Add(this.panel11);
@@ -136,15 +141,42 @@
             this.tb_FoodCategory.Text = "Danh mục";
             this.tb_FoodCategory.UseVisualStyleBackColor = true;
             // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.TeB_SearchCategory);
+            this.panel18.Controls.Add(this.btn_SearchCategory);
+            this.panel18.Location = new System.Drawing.Point(386, 7);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(375, 63);
+            this.panel18.TabIndex = 7;
+            // 
+            // TeB_SearchCategory
+            // 
+            this.TeB_SearchCategory.Location = new System.Drawing.Point(3, 21);
+            this.TeB_SearchCategory.Name = "TeB_SearchCategory";
+            this.TeB_SearchCategory.Size = new System.Drawing.Size(279, 21);
+            this.TeB_SearchCategory.TabIndex = 1;
+            // 
+            // btn_SearchCategory
+            // 
+            this.btn_SearchCategory.Location = new System.Drawing.Point(288, 3);
+            this.btn_SearchCategory.Name = "btn_SearchCategory";
+            this.btn_SearchCategory.Size = new System.Drawing.Size(82, 57);
+            this.btn_SearchCategory.TabIndex = 0;
+            this.btn_SearchCategory.Text = "Tìm";
+            this.btn_SearchCategory.UseVisualStyleBackColor = true;
+            this.btn_SearchCategory.Click += new System.EventHandler(this.btn_SearchCategory_Click);
+            // 
             // dtgv_Category
             // 
+            this.dtgv_Category.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_Category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_Category.Location = new System.Drawing.Point(5, 73);
             this.dtgv_Category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgv_Category.Name = "dtgv_Category";
             this.dtgv_Category.RowHeadersWidth = 51;
             this.dtgv_Category.RowTemplate.Height = 29;
-            this.dtgv_Category.Size = new System.Drawing.Size(373, 278);
+            this.dtgv_Category.Size = new System.Drawing.Size(449, 278);
             this.dtgv_Category.TabIndex = 4;
             // 
             // panel10
@@ -161,7 +193,7 @@
             // 
             // but_ShowCategory
             // 
-            this.but_ShowCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_ShowCategory.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_ShowCategory.Location = new System.Drawing.Point(285, 2);
             this.but_ShowCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_ShowCategory.Name = "but_ShowCategory";
@@ -169,10 +201,11 @@
             this.but_ShowCategory.TabIndex = 3;
             this.but_ShowCategory.Text = "Xem";
             this.but_ShowCategory.UseVisualStyleBackColor = true;
+            this.but_ShowCategory.Click += new System.EventHandler(this.but_ShowCategory_Click);
             // 
             // but_EditCategory
             // 
-            this.but_EditCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_EditCategory.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_EditCategory.Location = new System.Drawing.Point(198, 2);
             this.but_EditCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_EditCategory.Name = "but_EditCategory";
@@ -180,10 +213,11 @@
             this.but_EditCategory.TabIndex = 2;
             this.but_EditCategory.Text = "Sửa";
             this.but_EditCategory.UseVisualStyleBackColor = true;
+            this.but_EditCategory.Click += new System.EventHandler(this.but_EditCategory_Click);
             // 
             // but_DeleteCategory
             // 
-            this.but_DeleteCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_DeleteCategory.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_DeleteCategory.Location = new System.Drawing.Point(90, 2);
             this.but_DeleteCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_DeleteCategory.Name = "but_DeleteCategory";
@@ -191,10 +225,11 @@
             this.but_DeleteCategory.TabIndex = 1;
             this.but_DeleteCategory.Text = "Xóa";
             this.but_DeleteCategory.UseVisualStyleBackColor = true;
+            this.but_DeleteCategory.Click += new System.EventHandler(this.but_DeleteCategory_Click);
             // 
             // but_AddCategory
             // 
-            this.but_AddCategory.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_AddCategory.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_AddCategory.Location = new System.Drawing.Point(3, 2);
             this.but_AddCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_AddCategory.Name = "but_AddCategory";
@@ -202,15 +237,16 @@
             this.but_AddCategory.TabIndex = 0;
             this.but_AddCategory.Text = "Thêm";
             this.but_AddCategory.UseVisualStyleBackColor = true;
+            this.but_AddCategory.Click += new System.EventHandler(this.but_AddCategory_Click);
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel15);
-            this.panel11.Location = new System.Drawing.Point(383, 73);
+            this.panel11.Location = new System.Drawing.Point(460, 73);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(380, 281);
+            this.panel11.Size = new System.Drawing.Size(303, 281);
             this.panel11.TabIndex = 5;
             // 
             // panel14
@@ -220,22 +256,22 @@
             this.panel14.Location = new System.Drawing.Point(3, 51);
             this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(374, 45);
+            this.panel14.Size = new System.Drawing.Size(296, 45);
             this.panel14.TabIndex = 1;
             // 
             // txb_CategoryName
             // 
-            this.txb_CategoryName.Location = new System.Drawing.Point(129, 17);
+            this.txb_CategoryName.Location = new System.Drawing.Point(129, 13);
             this.txb_CategoryName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_CategoryName.Name = "txb_CategoryName";
-            this.txb_CategoryName.Size = new System.Drawing.Size(246, 21);
+            this.txb_CategoryName.Size = new System.Drawing.Size(162, 21);
             this.txb_CategoryName.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(13, 17);
+            this.label7.Location = new System.Drawing.Point(13, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 23);
             this.label7.TabIndex = 0;
@@ -248,23 +284,24 @@
             this.panel15.Location = new System.Drawing.Point(3, 2);
             this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(374, 44);
+            this.panel15.Size = new System.Drawing.Size(296, 44);
             this.panel15.TabIndex = 0;
             // 
             // txb_CategoryID
             // 
-            this.txb_CategoryID.Location = new System.Drawing.Point(129, 16);
+            this.txb_CategoryID.Location = new System.Drawing.Point(129, 12);
             this.txb_CategoryID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_CategoryID.Name = "txb_CategoryID";
             this.txb_CategoryID.ReadOnly = true;
-            this.txb_CategoryID.Size = new System.Drawing.Size(246, 21);
+            this.txb_CategoryID.Size = new System.Drawing.Size(162, 21);
             this.txb_CategoryID.TabIndex = 3;
+            this.txb_CategoryID.TextChanged += new System.EventHandler(this.txb_CategoryID_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(13, 16);
+            this.label8.Location = new System.Drawing.Point(13, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 23);
             this.label8.TabIndex = 0;
@@ -328,7 +365,7 @@
             // 
             // but_ShowFood
             // 
-            this.but_ShowFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_ShowFood.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_ShowFood.Location = new System.Drawing.Point(285, 2);
             this.but_ShowFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_ShowFood.Name = "but_ShowFood";
@@ -340,7 +377,7 @@
             // 
             // but_EditFood
             // 
-            this.but_EditFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_EditFood.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_EditFood.Location = new System.Drawing.Point(198, 2);
             this.but_EditFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_EditFood.Name = "but_EditFood";
@@ -352,7 +389,7 @@
             // 
             // but_DeleteFood
             // 
-            this.but_DeleteFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_DeleteFood.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_DeleteFood.Location = new System.Drawing.Point(90, 2);
             this.but_DeleteFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_DeleteFood.Name = "but_DeleteFood";
@@ -364,7 +401,7 @@
             // 
             // but_AddFood
             // 
-            this.but_AddFood.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.but_AddFood.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.but_AddFood.Location = new System.Drawing.Point(3, 2);
             this.but_AddFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_AddFood.Name = "but_AddFood";
@@ -380,25 +417,25 @@
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(381, 70);
+            this.panel2.Location = new System.Drawing.Point(461, 70);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 281);
+            this.panel2.Size = new System.Drawing.Size(297, 206);
             this.panel2.TabIndex = 1;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.nm_FoodPrice);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(3, 154);
+            this.panel8.Location = new System.Drawing.Point(5, 154);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(374, 45);
+            this.panel8.Size = new System.Drawing.Size(284, 45);
             this.panel8.TabIndex = 3;
             // 
             // nm_FoodPrice
             // 
-            this.nm_FoodPrice.Location = new System.Drawing.Point(95, 13);
+            this.nm_FoodPrice.Location = new System.Drawing.Point(109, 12);
             this.nm_FoodPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nm_FoodPrice.Maximum = new decimal(new int[] {
             1000000000,
@@ -406,14 +443,14 @@
             0,
             0});
             this.nm_FoodPrice.Name = "nm_FoodPrice";
-            this.nm_FoodPrice.Size = new System.Drawing.Size(229, 21);
+            this.nm_FoodPrice.Size = new System.Drawing.Size(135, 21);
             this.nm_FoodPrice.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(13, 17);
+            this.label4.Location = new System.Drawing.Point(13, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 23);
             this.label4.TabIndex = 0;
@@ -423,54 +460,54 @@
             // 
             this.panel7.Controls.Add(this.cob_FoodCategory);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(3, 100);
+            this.panel7.Location = new System.Drawing.Point(5, 100);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(374, 50);
+            this.panel7.Size = new System.Drawing.Size(284, 50);
             this.panel7.TabIndex = 2;
             // 
             // cob_FoodCategory
             // 
             this.cob_FoodCategory.FormattingEnabled = true;
-            this.cob_FoodCategory.Location = new System.Drawing.Point(109, 10);
+            this.cob_FoodCategory.Location = new System.Drawing.Point(109, 14);
             this.cob_FoodCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cob_FoodCategory.Name = "cob_FoodCategory";
-            this.cob_FoodCategory.Size = new System.Drawing.Size(268, 23);
+            this.cob_FoodCategory.Size = new System.Drawing.Size(168, 23);
             this.cob_FoodCategory.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(13, 10);
+            this.label3.Location = new System.Drawing.Point(13, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 23);
+            this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Doanh mục:";
+            this.label3.Text = "Danh mục:";
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.txb_FoodName);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(3, 51);
+            this.panel6.Location = new System.Drawing.Point(5, 51);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(374, 45);
+            this.panel6.Size = new System.Drawing.Size(284, 45);
             this.panel6.TabIndex = 1;
             // 
             // txb_FoodName
             // 
-            this.txb_FoodName.Location = new System.Drawing.Point(109, 17);
+            this.txb_FoodName.Location = new System.Drawing.Point(109, 13);
             this.txb_FoodName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_FoodName.Name = "txb_FoodName";
-            this.txb_FoodName.Size = new System.Drawing.Size(266, 21);
+            this.txb_FoodName.Size = new System.Drawing.Size(168, 21);
             this.txb_FoodName.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(13, 17);
+            this.label2.Location = new System.Drawing.Point(13, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 0;
@@ -480,19 +517,19 @@
             // 
             this.panel5.Controls.Add(this.txb_FoodID);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(3, 2);
+            this.panel5.Location = new System.Drawing.Point(5, 2);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(374, 44);
+            this.panel5.Size = new System.Drawing.Size(284, 44);
             this.panel5.TabIndex = 0;
             // 
             // txb_FoodID
             // 
-            this.txb_FoodID.Location = new System.Drawing.Point(109, 16);
+            this.txb_FoodID.Location = new System.Drawing.Point(109, 13);
             this.txb_FoodID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_FoodID.Name = "txb_FoodID";
             this.txb_FoodID.ReadOnly = true;
-            this.txb_FoodID.Size = new System.Drawing.Size(266, 21);
+            this.txb_FoodID.Size = new System.Drawing.Size(168, 21);
             this.txb_FoodID.TabIndex = 3;
             this.txb_FoodID.TextChanged += new System.EventHandler(this.txb_FoodID_TextChanged_1);
             // 
@@ -500,7 +537,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 16);
+            this.label1.Location = new System.Drawing.Point(13, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 23);
             this.label1.TabIndex = 0;
@@ -512,19 +549,19 @@
             this.panel1.Location = new System.Drawing.Point(5, 70);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 281);
+            this.panel1.Size = new System.Drawing.Size(455, 281);
             this.panel1.TabIndex = 0;
             // 
             // dtgv_Food
             // 
             this.dtgv_Food.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_Food.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Food.Location = new System.Drawing.Point(3, 2);
+            this.dtgv_Food.Location = new System.Drawing.Point(1, 3);
             this.dtgv_Food.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgv_Food.Name = "dtgv_Food";
             this.dtgv_Food.RowHeadersWidth = 51;
             this.dtgv_Food.RowTemplate.Height = 29;
-            this.dtgv_Food.Size = new System.Drawing.Size(365, 277);
+            this.dtgv_Food.Size = new System.Drawing.Size(447, 275);
             this.dtgv_Food.TabIndex = 0;
             // 
             // tb_DoiMatKhau
@@ -760,6 +797,7 @@
             this.btn_ShowBill.TabIndex = 18;
             this.btn_ShowBill.Text = "Thống kê";
             this.btn_ShowBill.UseVisualStyleBackColor = true;
+            this.btn_ShowBill.Click += new System.EventHandler(this.btn_ShowBill_Click);
             // 
             // dtp_ToDate
             // 
@@ -770,6 +808,7 @@
             // 
             // dGV_hienthi
             // 
+            this.dGV_hienthi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGV_hienthi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_hienthi.Location = new System.Drawing.Point(6, 45);
             this.dGV_hienthi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -806,13 +845,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 385);
+            this.ClientSize = new System.Drawing.Size(791, 385);
             this.Controls.Add(this.tbControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fCuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cửa Hàng";
             this.tb_FoodCategory.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Category)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
@@ -922,5 +963,8 @@
         private TextBox teB_tenhienthi;
         private Button btn_ShowBill;
         private DateTimePicker dtp_ToDate;
+        private Panel panel18;
+        private TextBox TeB_SearchCategory;
+        private Button btn_SearchCategory;
     }
 }

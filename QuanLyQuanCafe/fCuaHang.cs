@@ -18,54 +18,39 @@ namespace QuanLyQuanCafe
     public partial class fCuaHang : Form
     {
         BindingSource foodList = new BindingSource();
+        BindingSource categoryList= new BindingSource();
         public fCuaHang()
         {
             InitializeComponent();
             Load();
+            LoadDateTimePickerBiLL();
+            LoadListBillByDate(dtp_FromDate.Value, dtp_ToDate.Value);
         }
         void Load()
         {
             dtgv_Food.DataSource = foodList;
-
+            dtgv_Category.DataSource = categoryList;
             LoadCategoryIntoCombobox(cob_FoodCategory);
             AddFoodBinding();
+            AddCategoryBinding();
             LoadListFood();
+            LoadListCategory();
         }
         #region method
-        void LoadListFood()
+
+        #region Doanh thu
+        void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
         {
-            foodList.DataSource = foodDAO.Instance.GetListFood();
+            dGV_hienthi.DataSource = BillDAO.Instance.GetListBillByDate(checkIn, checkOut);
         }
-
-        void AddFoodBinding()
+        void LoadDateTimePickerBiLL()
         {
-            txb_FoodName.DataBindings.Add(new Binding("Text", dtgv_Food.DataSource, "Name", true, DataSourceUpdateMode.Never));
-            txb_FoodID.DataBindings.Add(new Binding("Text", dtgv_Food.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            nm_FoodPrice.DataBindings.Add(new Binding("Value", dtgv_Food.DataSource, "Price", true, DataSourceUpdateMode.Never));
+            DateTime today = DateTime.Now;
+            dtp_FromDate.Value = new DateTime(today.Year, today.Month, 1);
+            dtp_ToDate.Value = dtp_FromDate.Value.AddMonths(1).AddDays(-1);
         }
-        void LoadCategoryIntoCombobox(ComboBox cb)
-        {
-            cb.DataSource = CategoryDAO.Instance.GetListCategory();
-            cb.DisplayMember = "Name";
-        }
-
-        List<Food> SearchFoodByName(string name)
-        {
-            List<Food> listFood = foodDAO.Instance.SearchFoodByName(name);
-
-            return listFood;
-        }
-        public fCuaHang(Account acc)
-        {
-            InitializeComponent();
-
-            LoginAccount = acc;
-        }
-
-
         #endregion
-
-        #region Events
+        #region tài khoản
         private Account loginAccount;
 
         public Account LoginAccount
@@ -80,7 +65,7 @@ namespace QuanLyQuanCafe
             teB_tenhienthi.Text = LoginAccount.DisplayName;
         }
 
-        void UpdateAccountInfo()//
+        void UpdateAccountInfo()
         {
             string displayName = teB_tenhienthi.Text;
             string password = teB_matkhaucu.Text;
@@ -97,7 +82,7 @@ namespace QuanLyQuanCafe
                 if (AccountDAO.Instance.UpdateAccount(userName, displayName, password, newpass))
                 {
                     MessageBox.Show("Cập nhật thành công");
-                    
+
                 }
                 else
                 {
@@ -105,6 +90,97 @@ namespace QuanLyQuanCafe
                 }
             }
         }
+        #endregion
+        #region sản phẩm
+        void LoadListFood()
+        {
+            foodList.DataSource = foodDAO.Instance.GetListFood();
+        }
+        void AddFoodBinding()
+        {
+            txb_FoodName.DataBindings.Add(new Binding("Text", dtgv_Food.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txb_FoodID.DataBindings.Add(new Binding("Text", dtgv_Food.DataSource, "ID", true, DataSourceUpdateMode.Never));
+            nm_FoodPrice.DataBindings.Add(new Binding("Value", dtgv_Food.DataSource, "Price", true, DataSourceUpdateMode.Never));
+        }
+        List<Food> SearchFoodByName(string name)
+        {
+            List<Food> listFood = foodDAO.Instance.SearchFoodByName(name);
+
+            return listFood;
+        }
+        #endregion
+        #region danh mục
+        void LoadListCategory()
+        {
+            categoryList.DataSource = CategoryDAO.Instance.GetListCategory();
+        }
+
+        void AddCategoryBinding()
+        {
+            txb_CategoryName.DataBindings.Add(new Binding("Text", dtgv_Category.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txb_CategoryID.DataBindings.Add(new Binding("Text", dtgv_Category.DataSource, "ID", true, DataSourceUpdateMode.Never));
+        }
+        void LoadCategoryIntoCombobox(ComboBox cb)
+        {
+            cb.DataSource = CategoryDAO.Instance.GetListCategory();
+            cb.DisplayMember = "Name";
+        }
+        List<Category> SearchCategoryByName(string name)
+        {
+            List<Category> listCategory = CategoryDAO.Instance.SearchCategoryByName(name);
+
+            return listCategory;
+        }
+        #endregion
+
+        #endregion
+
+        #region Events
+
+        private event EventHandler insertFood;
+        public event EventHandler InsertFood
+        {
+            add { insertFood += value; }
+            remove { insertFood -= value; }
+        }
+        private event EventHandler deleteFood;
+        public event EventHandler DeleteFood
+        {
+            add { deleteFood += value; }
+            remove { deleteFood -= value; }
+        }
+        private event EventHandler updateFood;
+        public event EventHandler UpdateFood
+        {
+            add { updateFood += value; }
+            remove { updateFood -= value; }
+        }
+
+        private event EventHandler insertCategory;
+        public event EventHandler ÍnsertCategory
+        {
+            add { insertCategory += value; }
+            remove { insertCategory -= value; }
+        }
+        private event EventHandler deleteCategory;
+        public event EventHandler DeleteCategory
+        {
+            add { deleteCategory += value; }
+            remove { deleteCategory -= value; }
+        }
+        private event EventHandler updateCategory;
+        public event EventHandler UpdateCategory
+        {
+            add { updateCategory += value; }
+            remove { updateCategory -= value; }
+        }
+        #region doanh thu
+        private void btn_ShowBill_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(dtp_FromDate.Value, dtp_ToDate.Value);
+        }
+        #endregion
+        #region tài khoản
         private void btn_huybo_Click(object sender, EventArgs e)
         {
             teB_tennguoidung.Clear();
@@ -113,7 +189,12 @@ namespace QuanLyQuanCafe
             teB_matkhaumoi.Clear();
             teB_matkhaucu.Clear();
         }
-
+        private void btn_xacnhan_Click(object sender, EventArgs e)
+        {
+            UpdateAccountInfo();
+        }
+        #endregion
+        #region sản phẩm
         private void but_DeleteFood_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txb_FoodID.Text);
@@ -143,7 +224,7 @@ namespace QuanLyQuanCafe
             float price = (float)nm_FoodPrice.Value;
             int id = Convert.ToInt32(txb_FoodID.Text);
 
-            if (foodDAO.Instance.UpdateFood(id, name, categoryID, price))
+            if (foodDAO.Instance.UpdateFood(name, categoryID, price, id))
             {
                 MessageBox.Show("Sửa món thành công !!");
                 LoadListFood();
@@ -205,32 +286,86 @@ namespace QuanLyQuanCafe
         {
             LoadListFood();
         }
+        #endregion
+        #region danh mục
+        private void btn_SearchCategory_Click(object sender, EventArgs e)
+        {
+            categoryList.DataSource = SearchCategoryByName(TeB_SearchCategory.Text);
+        }
 
-        private void btn_xacnhan_Click(object sender, EventArgs e)
+        private void but_AddCategory_Click(object sender, EventArgs e)
         {
-            UpdateAccountInfo();
+            string name = txb_CategoryName.Text;
+
+            if (CategoryDAO.Instance.InsertCategory(name))
+            {
+                MessageBox.Show("Thêm danh mục thành công !!");
+                LoadListCategory();
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi thêm danh mục !!");
+            }
         }
-        private event EventHandler insertFood;
-        public event EventHandler InsertFood
+
+        private void but_DeleteCategory_Click(object sender, EventArgs e)
         {
-            add { insertFood += value; }
-            remove { insertFood -= value; }
+            int id = Convert.ToInt32(txb_FoodID.Text);
+
+            if (CategoryDAO.Instance.DeleteCategory(id))
+            {
+                MessageBox.Show("Xóa danh mục thành công !!");
+                LoadListCategory();
+                if (deleteCategory != null)
+                    deleteCategory(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi xóa danh mục !!");
+            }
         }
-        private event EventHandler deleteFood;
-        public event EventHandler DeleteFood
+
+        private void but_EditCategory_Click(object sender, EventArgs e)
         {
-            add { deleteFood += value; }
-            remove { deleteFood -= value; }
+            string name = txb_CategoryName.Text;
+            int id = Convert.ToInt32(txb_CategoryID.Text);
+
+            if (CategoryDAO.Instance.UpdateCategory(id, name))
+            {
+                MessageBox.Show("Sửa danh mục thành công !!");
+                LoadListCategory();
+                if (updateCategory != null)
+                    updateCategory(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi sửa danh mục !!");
+            }
         }
-        private event EventHandler updateFood;
-        public event EventHandler UpdateFood
+
+        private void but_ShowCategory_Click(object sender, EventArgs e)
         {
-            add { updateFood += value; }
-            remove { updateFood -= value; }
+            LoadListCategory();
+        }
+
+        private void txb_CategoryID_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = -1;
+                if (Int32.TryParse(txb_CategoryID.Text, out id))
+                {
+                    Category category = CategoryDAO.Instance.GetCategoryByID(id);
+                    txb_CategoryID.Text = category.ID.ToString();
+                }
+            }
+            catch { }
         }
         #endregion
 
-        
+        #endregion
+
+
     }
 }
 

@@ -21,6 +21,10 @@ namespace QuanLyQuanCafe
             InitializeComponent();
         }
         #region method
+        private void fMenu_Load(object sender, EventArgs e)
+        {
+            LoadCategory();
+        }
         void LoadCategory()
         {
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
@@ -62,6 +66,8 @@ namespace QuanLyQuanCafe
         }
         #endregion
 
+        #region events
+
         private void but_Thanhtoan_Click(object sender, EventArgs e)
         {
 
@@ -95,9 +101,7 @@ namespace QuanLyQuanCafe
             }
         }
 
-        private void fMenu_Load(object sender, EventArgs e)
-        { 
-            LoadCategory();
-        }
+        
+        #endregion
     }
 }

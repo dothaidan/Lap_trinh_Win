@@ -18,7 +18,7 @@ namespace QuanLyQuanCafe.DAO
         }
         private DataProvider() { }
 
-        private string connectionstr = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+        private string connectionstr = "Data Source=.\\ecussql2008;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
 
         
 

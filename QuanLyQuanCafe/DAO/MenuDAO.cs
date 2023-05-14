@@ -22,8 +22,8 @@ namespace QuanLyQuanCafe.DAO
         public List<Menu> GetListMenuByTable(int id)
         {
             List<Menu> ListMenu = new List<Menu>();
-            string query = "USP_GetBillInfoByIDTable @idTable = " + id;
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            string query = "USP_GetBillInfoByIDTable @idTable";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[]{ id});
             foreach (DataRow row in data.Rows)
             {
                 Menu menu = new Menu(row);
